@@ -1,0 +1,259 @@
+.header {
+    @include content-padding-in-line;
+  
+    margin-top: 50px;
+    margin-bottom: 100px;
+
+  @include on-tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 60px;
+  }
+
+  &__left {
+    margin-bottom: 50px;
+    @include on-tablet {
+        max-width: 540px;
+    }
+
+    @include on-desktop {
+        max-width: 700px;
+    }
+  }
+
+  &__tag {  
+    font-size: 12px;
+    font-family: $font-mono;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    color: $accent-color;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 50px;
+      height: 1px;
+      background-color: $accent-color;
+      margin-right: 10px;
+    }
+  }
+
+  &__title {
+    font-family: $font;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 0;
+    margin-bottom: 1.5rem;
+    color: $text-color;
+    
+    span {
+        color: $accent-color;
+        font-style: italic;
+    }
+
+    @include on-tablet {
+        font-size: clamp(3rem, 5vw, 5.5rem);
+    }
+  }
+
+  &__description {
+    font-size: 13px;
+    color: $text-muted-color;
+    line-height: 1.8;
+    max-width: 600px;
+    margin-bottom: 1rem;
+
+    @include on-tablet {
+        font-size: 17px;
+    }
+  }
+
+  &__actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 16px;
+  }
+
+    &__right {
+        position: relative;
+    }
+
+  &__accent {
+    position: absolute;
+    top: 12px;
+    left: 0px;
+    right: 0px;
+    bottom: -12px;
+    border: 1px solid $accent-color;
+    opacity: 0.3;
+    pointer-events: none;
+
+    z-index: 10;
+
+    @include on-tablet {
+        top: 24px;
+        left: 24px;
+        right: -24px;
+        bottom: -24px;
+    }
+  }
+
+    &__card {
+        width: 80%;
+        height: 280px;
+        margin: 0 auto;
+        padding: 75px 15px 25px 15px;
+        background: $background-surface-color;
+        border: 0.5px solid $background-card-color;
+        position: relative;
+
+        @include on-tablet {
+            width: 340px;
+            height: 360px;
+            padding: 75px 15px 25px 15px;
+        }
+    }
+
+    &__avatar {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 70px;
+        font-weight: 500;
+        font-family: $font;
+
+        background: linear-gradient(135deg, $accent-purple-color, $accent-color);
+        margin: 0 auto 30px;
+        color: $background-color;
+    }
+
+    &__status {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        padding: 10px 15px;
+        width: fit-content;
+        margin: 0 auto 30px;
+        font-family: $font-mono;
+        font-size: 12px;
+        background-color: rgba(200, 245, 66, 0.08);
+        border: 1px solid rgba(200, 245, 66, 0.2);
+        color: $accent-color;
+    }
+
+    &__dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: $accent-color;
+    }
+
+    &__location {
+        font-family: $font-mono;
+        font-size: 13px;
+        color: $text-dim-color;
+        text-align: center;
+        letter-spacing: 0.05em;
+    }
+
+    &__stats {
+        position: absolute;
+        bottom: -1.5rem;
+        left: -0.8rem;
+        background: $background-surface-color;
+        border: 1px solid $border-color;
+        padding: 0.5rem 1rem;
+        display: flex;
+        gap: 1rem;
+        z-index: 20;
+        
+        @include on-tablet {
+            bottom: -3rem;
+            left: -3rem;
+            padding: 1rem 1.5rem;
+            gap: 2rem;
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__num {
+            font-family: $font;
+            font-size: 1.5rem;
+            color: $text-color;
+            line-height: 1;
+                
+            @include on-tablet {
+                font-size: 2.5rem;
+            }
+        }
+
+        &__label {
+            font-size: 9px;
+            color: $text-muted-color;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: 0.25rem;
+
+            @include on-tablet {
+                font-size: 11px;
+            }
+        }
+    }
+}
+
+.btn {
+  cursor: pointer;
+  font-family: $font-mono;
+  font-size: 10px;
+
+    @include on-tablet {
+        font-size: 13px;
+    }
+}
+
+.btn--primary {
+    padding: 0.5rem 1.3rem;
+    background: $accent-color;
+    border: 0.5px solid $accent-color;
+    color: #0a0a0f;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    transition: opacity 0.2s;
+    
+    @include on-tablet {
+        padding: 0.9rem 2rem;
+    }
+}
+
+.btn--secondary {
+    padding: 0.5rem 1.3rem;
+    border: 0.5px solid $border-hover-color;
+    background: transparent;
+    color: $text-muted-color;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+    transition: border-color 0.2s, color 0.2s;
+
+    @include on-tablet {
+        padding: 0.9rem 2rem;
+    }
+}
+

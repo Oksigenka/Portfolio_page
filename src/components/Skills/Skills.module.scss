@@ -1,0 +1,291 @@
+.skills {
+  @include content-padding-in-line;
+  min-height: 100vh;
+  padding: 20px 30px 100px;
+
+  background: $background-color;
+  color: $text-color;
+
+  font-family: $font-body;
+
+  box-sizing: border-box;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  // ==========================================
+  // CONTAINER
+  // ==========================================
+
+  &__container {
+    width: 100%;
+    max-width: 1740px;
+    margin: 0 auto;
+  }
+
+  // ==========================================
+  // SECTION LABEL
+  // ==========================================
+
+  .sectionLabel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 27px;
+
+    color: $text-dim-color;
+
+    font-family: $font-mono;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    &__dash {
+      width: 20px;
+      height: 1px;
+
+      background: $border-color;
+    }
+
+    &__line {
+      width: 70px;
+      height: 1px;
+      margin-left: 2px;
+
+      background: $border-color;
+    }
+  }
+
+  // ==========================================
+  // HEADING
+  // ==========================================
+
+  &__heading {
+    margin: 0 0 65px;
+
+    color: $text-color;
+
+    font-family: $font;
+    font-size: clamp(52px, 5vw, 72px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -3px;
+
+    em {
+      color: $accent-color;
+
+      font-weight: 400;
+      font-style: italic;
+    }
+  }
+
+  // ==========================================
+  // SKILLS GRID
+  // ==========================================
+
+  .skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    border: 1px solid $border-color;
+  }
+
+  // ==========================================
+  // CATEGORY
+  // ==========================================
+
+  .skillCategory {
+    min-width: 0;
+    min-height: 340px;
+    padding: 43px 40px 35px;
+
+    border-right: 1px solid $border-color;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &__title {
+      margin: 0 0 39px;
+
+      color: $accent-color;
+
+      font-family: $font-mono;
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+  }
+
+  // ==========================================
+  // SKILL LIST
+  // ==========================================
+
+  .skillList {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  // ==========================================
+  // SKILL
+  // ==========================================
+
+  .skill {
+    width: 100%;
+
+    &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 15px;
+
+      margin-bottom: 10px;
+    }
+
+    &__name {
+      color: $text-color;
+
+      font-family: $font-body;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    &__level {
+      flex-shrink: 0;
+
+      color: $text-dim-color;
+
+      font-family: $font-mono;
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    // ------------------------------------------
+    // PROGRESS BAR
+    // ------------------------------------------
+
+    &__bar {
+      width: 100%;
+      height: 3px;
+
+      background: rgba(240, 238, 232, 0.07);
+
+      overflow: hidden;
+    }
+
+    &__progress {
+      height: 100%;
+
+      background: $accent-color;
+
+      transform-origin: left center;
+
+      transition:
+        width 0.8s ease;
+    }
+  }
+
+  // ==========================================
+  // TABLET
+  // ==========================================
+
+  @media (max-width: 1200px) {
+    padding: 20px 24px 80px;
+
+    .skillsGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skillCategory {
+      &:nth-child(2) {
+        border-right: none;
+      }
+
+      &:nth-child(-n + 2) {
+        border-bottom: 1px solid $border-color;
+      }
+    }
+  }
+
+  // ==========================================
+  // MOBILE
+  // ==========================================
+
+  @media (max-width: 650px) {
+    padding: 18px 18px 60px;
+
+    .sectionLabel {
+      margin-bottom: 20px;
+
+      font-size: 10px;
+      letter-spacing: 1.5px;
+
+      &__line {
+        width: 50px;
+      }
+    }
+
+    &__heading {
+      margin-bottom: 45px;
+
+      font-size: clamp(42px, 13vw, 58px);
+      letter-spacing: -2px;
+    }
+
+    .skillsGrid {
+      grid-template-columns: 1fr;
+    }
+
+    .skillCategory {
+      min-height: auto;
+      padding: 30px 22px;
+
+      border-right: none;
+      border-bottom: 1px solid $border-color;
+
+      &:nth-child(2) {
+        border-right: none;
+      }
+
+      &:nth-child(-n + 2) {
+        border-bottom: 1px solid $border-color;
+      }
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      &__title {
+        margin-bottom: 28px;
+
+        font-size: 11px;
+      }
+    }
+
+    .skillList {
+      gap: 20px;
+    }
+
+    .skill {
+      &__name {
+        font-size: 14px;
+      }
+
+      &__level {
+        font-size: 11px;
+      }
+
+      &__bar {
+        height: 2px;
+      }
+    }
+  }
+}

@@ -1,0 +1,286 @@
+.beyondCoding {
+  @include content-padding-in-line;
+  min-height: 100vh;
+  padding: 20px 24px 100px;
+
+  background: $background-color;
+  color: $text-color;
+
+  font-family: $font-body;
+
+  box-sizing: border-box;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  // ==========================================
+  // CONTAINER
+  // ==========================================
+
+  &__container {
+    width: 100%;
+    max-width: 1740px;
+    margin: 0 auto;
+  }
+
+  // ==========================================
+  // SECTION LABEL
+  // ==========================================
+
+  .sectionLabel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 27px;
+
+    color: $text-dim-color;
+
+    font-family: $font-mono;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    &__dash {
+      width: 20px;
+      height: 1px;
+
+      background: $border-color;
+    }
+
+    &__line {
+      width: 75px;
+      height: 1px;
+      margin-left: 2px;
+
+      background: $border-color;
+    }
+  }
+
+  // ==========================================
+  // HEADING
+  // ==========================================
+
+  &__heading {
+    margin: 0 0 65px;
+
+    color: $text-color;
+
+    font-family: $font;
+    font-size: clamp(52px, 5vw, 72px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -3px;
+
+    em {
+      color: $accent-color;
+
+      font-weight: 400;
+      font-style: italic;
+    }
+  }
+
+  // ==========================================
+  // INTERESTS GRID
+  // ==========================================
+
+  .interests {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    border: 1px solid $border-color;
+  }
+
+  // ==========================================
+  // INTEREST CARD
+  // ==========================================
+
+  .interest {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 245px;
+    padding: 55px 25px 35px;
+
+    text-align: center;
+
+    border-right: 1px solid $border-color;
+
+    transition:
+      background $effectDuration ease;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &:hover {
+      background: $background-surface-color;
+    }
+
+    // ------------------------------------------
+    // ICON
+    // ------------------------------------------
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 48px;
+      height: 48px;
+      margin-bottom: 25px;
+
+      font-size: 35px;
+      line-height: 1;
+    }
+
+    // ------------------------------------------
+    // TITLE
+    // ------------------------------------------
+
+    &__title {
+      margin: 0 0 10px;
+
+      color: $text-color;
+
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    // ------------------------------------------
+    // DESCRIPTION
+    // ------------------------------------------
+
+    &__description {
+      max-width: 220px;
+      margin: 0;
+
+      color: $text-muted-color;
+
+      font-size: 15px;
+      line-height: 1.65;
+    }
+  }
+
+  // ==========================================
+  // TABLET
+  // ==========================================
+
+  @media (max-width: 1200px) {
+    padding: 20px 24px 80px;
+
+    .interests {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .interest {
+      &:nth-child(3) {
+        border-right: none;
+      }
+
+      &:nth-child(-n + 3) {
+        border-bottom: 1px solid $border-color;
+      }
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+
+  // ==========================================
+  // MOBILE
+  // ==========================================
+
+  @media (max-width: 650px) {
+    padding: 18px 18px 60px;
+
+    .sectionLabel {
+      margin-bottom: 20px;
+
+      font-size: 10px;
+      letter-spacing: 1.5px;
+
+      &__line {
+        width: 50px;
+      }
+    }
+
+    &__heading {
+      margin-bottom: 45px;
+
+      font-size: clamp(42px, 13vw, 58px);
+      letter-spacing: -2px;
+    }
+
+    .interests {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .interest {
+      min-height: 220px;
+
+      padding: 35px 15px 25px;
+
+      &:nth-child(3) {
+        border-right: 1px solid $border-color;
+      }
+
+      &:nth-child(-n + 3) {
+        border-bottom: 1px solid $border-color;
+      }
+
+      &:nth-child(2n) {
+        border-right: none;
+      }
+
+      &:nth-child(n + 5) {
+        border-bottom: none;
+      }
+
+      &__icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 18px;
+
+        font-size: 30px;
+      }
+
+      &__title {
+        font-size: 15px;
+      }
+
+      &__description {
+        font-size: 13px;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  // ==========================================
+  // SMALL MOBILE
+  // ==========================================
+
+  @media (max-width: 420px) {
+    .interests {
+      grid-template-columns: 1fr;
+    }
+
+    .interest {
+      min-height: auto;
+      padding: 30px 20px;
+
+      border-right: none !important;
+      border-bottom: 1px solid $border-color !important;
+
+      &:last-child {
+        border-bottom: none !important;
+      }
+    }
+  }
+}

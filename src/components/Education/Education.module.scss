@@ -1,0 +1,264 @@
+.education {
+  @include content-padding-in-line;
+  min-height: 100vh;
+  padding: 20px 40px 70px;
+
+  background: $background-color;
+  color: $text-color;
+
+  font-family: $font-body;
+
+  box-sizing: border-box;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  // =========================================
+  // CONTAINER
+  // =========================================
+
+  &__container {
+    width: 100%;
+    max-width: 1740px;
+    margin: 0 auto;
+  }
+
+  // ==========================================
+  // SECTION LABEL
+  // ==========================================
+
+  .sectionLabel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 22px;
+
+    color: $text-dim-color;
+
+    font-family: $font-mono;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    @include on-tablet {
+      margin-bottom: 20px;
+
+      font-size: 15px;
+      letter-spacing: 1.5px;
+    }
+
+    @include on-desktop {
+    //   margin-bottom: 30px;
+      // padding: 20px 24px 60px;
+    }
+
+    &__dash {
+      width: 20px;
+      height: 1px;
+
+      background: $border-color;
+    }
+
+    &__line {
+      width: 75px;
+      height: 1px;
+      margin-left: 2px;
+
+      background: $border-color;
+
+      @include on-tablet {
+        width: 50px;
+      }
+    }
+  }
+
+  // ==========================================
+  // HEADING
+  // ==========================================
+
+  &__heading {
+    // margin-bottom: 45px;
+
+    font-family: $font;
+    font-size: clamp(42px, 13vw, 58px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -2px;
+
+    @include on-desktop {
+      margin: 0 0 65px;
+
+      color: $text-color;
+
+      font-size: clamp(52px, 5vw, 72px);
+      letter-spacing: -3px;
+    }
+
+    &__em {
+      color: $accent-color;
+
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    @include on-tablet {
+      margin-bottom: 55px;
+    }
+  }
+
+  // ==========================================
+  // GRID
+  // ==========================================
+
+  .educationGrid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+
+    @include on-tablet {
+      gap: 24px;
+    }
+
+    @include on-desktop {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      gap: 30px;
+    }
+  }
+
+  // ==========================================
+  // CARD
+  // ==========================================
+
+  .educationCard {
+    min-height: auto;
+
+    padding: 30px 22px 28px;
+    margin-bottom: 10px;
+
+    // border-left-width: 3px;
+    background: $background-surface-color;
+
+    border: 1px solid $border-color;
+    border-left: 4px solid $accent-color;
+
+    transition:
+      background $effectDuration ease,
+      border-color $effectDuration ease,
+      transform $effectDuration ease;
+
+    &:hover {
+      background: lighten($background-surface-color, 2%);
+
+      border-color: $border-hover-color;
+      border-left-color: $accent-color;
+
+      transform: translateY(-2px);
+    }
+
+    &__period {
+      margin-bottom: 17px;
+
+      font-size: 10px;
+      letter-spacing: 1.2px;
+    }
+
+    &__title {
+      margin-bottom: 10px;
+
+      font-size: 19px;
+    }
+
+    &__institution {
+      margin-bottom: 18px;
+
+      font-size: 15px;
+    }
+
+    &__description {
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    @include on-tablet {
+      padding: 35px 30px 30px;
+
+      &__title {
+        font-size: 20px;
+      }
+
+      &__description {
+        font-size: 15px;
+      }
+    }
+
+    @include on-desktop {
+      position: relative;
+      min-height: 263px;
+      padding: 42px 38px 35px;    
+    }
+    
+    // ------------------------------------------
+    // PERIOD
+    // ------------------------------------------
+
+    &__period {
+      display: block;
+
+      margin-bottom: 20px;
+
+      color: $text-dim-color;
+
+      font-family: $font-mono;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+    }
+
+    // ------------------------------------------
+    // TITLE
+    // ------------------------------------------
+
+    &__title {
+      margin: 0 0 13px;
+
+      color: $text-color;
+
+      font-family: $font-body;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    // ------------------------------------------
+    // INSTITUTION
+    // ------------------------------------------
+
+    &__institution {
+      margin-bottom: 22px;
+
+      color: $accent-purple-color;
+
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+
+    // ------------------------------------------
+    // DESCRIPTION
+    // ------------------------------------------
+
+    &__description {
+      max-width: 850px;
+      margin: 0;
+
+      color: $text-muted-color;
+
+      font-size: 16px;
+      line-height: 1.85;
+    }
+  }
+}

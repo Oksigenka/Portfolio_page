@@ -1,0 +1,438 @@
+.experience {
+  @include content-padding-in-line;
+  min-height: 100vh;
+  padding: 20px 30px 100px;
+
+  background: $background-color;
+  color: $text-color;
+
+  font-family: $font-body;
+
+  box-sizing: border-box;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  // ==========================================
+  // CONTAINER
+  // ==========================================
+
+  &__container {
+    width: 100%;
+    max-width: 1700px;
+    margin: 0 auto;
+  }
+
+  // ==========================================
+  // SECTION LABEL
+  // ==========================================
+
+  .sectionLabel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 22px;
+
+    color: $text-dim-color;
+
+    font-family: $font-mono;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    @include on-tablet {
+      margin-bottom: 20px;
+
+      font-size: 15px;
+      letter-spacing: 1.5px;
+    }
+
+    @include on-desktop {
+    //   margin-bottom: 30px;
+      // padding: 20px 24px 60px;
+    }
+
+    &__dash {
+      width: 20px;
+      height: 1px;
+
+      background: $border-color;
+    }
+
+    &__line {
+      width: 75px;
+      height: 1px;
+      margin-left: 2px;
+
+      background: $border-color;
+
+      @include on-tablet {
+        width: 50px;
+      }
+    }
+  }
+  // ==========================================
+  // HEADING
+  // ==========================================
+
+  &__heading {
+    margin: 0 0 65px;
+
+    color: $text-color;
+
+    font-family: $font;
+    font-size: clamp(52px, 5vw, 72px);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -3px;
+
+    em {
+      color: $accent-color;
+
+      font-weight: 400;
+      font-style: italic;
+    }
+  }
+
+  // ==========================================
+  // TIMELINE
+  // ==========================================
+
+  .timeline {
+    position: relative;
+
+    width: min(100%, 1000px);
+  }
+
+  // Vertical line
+  .timeline::before {
+    content: '';
+
+    position: absolute;
+    top: 15px;
+    bottom: 0;
+    left: 7px;
+
+    width: 1px;
+
+    background: $border-color;
+  }
+
+  // ==========================================
+  // EXPERIENCE ITEM
+  // ==========================================
+
+  .experienceItem {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 15px 1fr;
+
+    column-gap: 25px;
+
+    min-height: 355px;
+
+    &:last-child {
+      min-height: auto;
+    }
+
+    // ------------------------------------------
+    // TIMELINE
+    // ------------------------------------------
+
+    &__timeline {
+      position: relative;
+      z-index: 2;
+    }
+
+    &__dot {
+      position: absolute;
+      top: 9px;
+      left: 0;
+
+      width: 13px;
+      height: 13px;
+
+      border: 2px solid $accent-color;
+      border-radius: 50%;
+
+      background: $background-color;
+
+      box-shadow: none;
+
+      transition: all $effectDuration ease;
+    }
+
+    &__dotActive {
+      width: 13px;
+      height: 13px;
+
+      border: none;
+
+      background: $accent-color;
+
+      box-shadow:
+        0 0 10px rgba(200, 245, 66, 0.45),
+        0 0 20px rgba(200, 245, 66, 0.15);
+    }
+
+    // ------------------------------------------
+    // CONTENT
+    // ------------------------------------------
+
+    &__content {
+      padding-bottom: 75px;
+    }
+
+    // ------------------------------------------
+    // DATE + BADGE
+    // ------------------------------------------
+
+    &__meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      margin-bottom: 15px;
+    }
+
+    &__date {
+      color: $text-dim-color;
+
+      font-family: $font-mono;
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    // ------------------------------------------
+    // POSITION
+    // ------------------------------------------
+
+    &__position {
+      margin: 0 0 13px;
+
+      color: $text-color;
+
+      font-family: $font-body;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+
+    // ------------------------------------------
+    // COMPANY
+    // ------------------------------------------
+
+    &__company {
+      margin-bottom: 23px;
+
+      color: $accent-purple-color;
+
+      font-family: $font-body;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    // ------------------------------------------
+    // DESCRIPTION
+    // ------------------------------------------
+
+    &__description {
+      max-width: 850px;
+      margin: 0 0 23px;
+
+      color: $text-muted-color;
+
+      font-size: 17px;
+      line-height: 1.9;
+    }
+  }
+
+  // ==========================================
+  // CURRENT BADGE
+  // ==========================================
+
+  .currentBadge {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 6px 12px;
+
+    border: 1px solid rgba(200, 245, 66, 0.25);
+
+    background: rgba(200, 245, 66, 0.08);
+
+    color: $accent-color;
+
+    font-family: $font-mono;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+  }
+
+  // ==========================================
+  // TECHNOLOGIES
+  // ==========================================
+
+  .technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .technology {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 36px;
+    padding: 7px 15px;
+
+    border: 1px solid $border-color;
+
+    background: rgba(240, 238, 232, 0.025);
+
+    color: $text-muted-color;
+
+    font-family: $font-mono;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+
+    transition:
+      border-color $effectDuration ease,
+      color $effectDuration ease,
+      background $effectDuration ease;
+
+    &:hover {
+      border-color: $border-hover-color;
+
+      background: rgba(240, 238, 232, 0.05);
+
+      color: $text-color;
+    }
+  }
+
+  // ==========================================
+  // TABLET
+  // ==========================================
+
+  @media (max-width: $desktop-min-width) {
+    &__heading {
+      margin-bottom: 55px;
+    }
+
+    .timeline {
+      width: 100%;
+    }
+
+    .experienceItem {
+      &__description {
+        max-width: 800px;
+      }
+    }
+  }
+
+  // ==========================================
+  // MOBILE
+  // ==========================================
+
+  @media (max-width: 650px) {
+    .sectionLabel {
+      margin-bottom: 20px;
+
+      font-size: 10px;
+      letter-spacing: 1.5px;
+
+      &__line {
+        width: 50px;
+      }
+    }
+
+    &__heading {
+      margin-bottom: 45px;
+
+      font-size: clamp(42px, 13vw, 58px);
+      letter-spacing: -2px;
+    }
+
+    .timeline::before {
+      left: 6px;
+    }
+
+    .experienceItem {
+      grid-template-columns: 13px 1fr;
+      column-gap: 20px;
+
+      min-height: auto;
+
+      &__content {
+        padding-bottom: 55px;
+      }
+
+      &__dot {
+        top: 8px;
+
+        width: 12px;
+        height: 12px;
+      }
+
+      &__dotActive {
+        width: 12px;
+        height: 12px;
+      }
+
+      &__meta {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+
+        margin-bottom: 15px;
+      }
+
+      &__date {
+        font-size: 10px;
+        letter-spacing: 1.2px;
+      }
+
+      &__position {
+        margin-bottom: 10px;
+
+        font-size: 20px;
+      }
+
+      &__company {
+        margin-bottom: 18px;
+
+        font-size: 16px;
+      }
+
+      &__description {
+        margin-bottom: 20px;
+
+        font-size: 15px;
+        line-height: 1.75;
+      }
+    }
+
+    .currentBadge {
+      padding: 5px 10px;
+
+      font-size: 10px;
+    }
+
+    .technologies {
+      gap: 7px;
+    }
+
+    .technology {
+      min-height: 32px;
+      padding: 6px 11px;
+
+      font-size: 10px;
+    }
+  }
+}

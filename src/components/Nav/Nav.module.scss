@@ -1,0 +1,70 @@
+.nav {
+  margin-top: 24px;
+
+  @include on-tablet {
+    margin-top: 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: $font-body;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    list-style: none;
+
+    @include on-tablet {
+      flex-direction: row;
+      gap: 25px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @include on-desktop {
+      flex-direction: row;
+      gap: 32px;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.link {
+  position: relative;
+
+  font-size: 13px;
+  font-weight: 500;
+  color: $text-muted-color;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+
+  text-transform: uppercase;
+  transition: color 0.2s;
+
+    @include on-tablet {
+      font-size: 10px;
+    }
+
+    @include on-desktop {
+      font-size: 13px;
+    }
+
+  &:hover {
+    color: $text-color;
+  }
+
+  &.active {
+    color: $text-color;
+  }
+
+  &.active::after {
+    transform: scaleX(1);
+  }
+}
+

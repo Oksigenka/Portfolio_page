@@ -1,0 +1,285 @@
+.aboutCard {
+    @include content-padding-in-line;
+
+//   min-height: 100vh;
+  width: 100%;
+  padding: 20px 30px 50px;
+
+  background: $background-color;
+  color: $text-color;
+
+  font-family: $font-body;
+
+  box-sizing: border-box;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  // ==========================================
+  // CONTAINER
+  // ==========================================
+
+  &__container {
+    width: 100%;
+    margin: 0 auto;
+
+    @include on-tablet {
+      padding: 18px 18px 50px;
+    }
+  }
+
+  // ==========================================
+  // SECTION LABEL
+  // ==========================================
+
+  .sectionLabel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 22px;
+
+    color: $text-dim-color;
+
+    font-family: $font-mono;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    @include on-tablet {
+      margin-bottom: 20px;
+
+      font-size: 15px;
+      letter-spacing: 1.5px;
+    }
+
+    @include on-desktop {
+    //   margin-bottom: 30px;
+    //   padding: 20px 24px 60px;
+    }
+
+    &__dash {
+      width: 20px;
+      height: 1px;
+
+      background: $border-color;
+    }
+
+    &__line {
+      width: 100px;
+      height: 1px;
+      margin-left: 2px;
+
+      background: $border-color;
+
+      @include on-tablet {
+        width: 50px;
+      }
+    }
+  }
+
+//   &__grid {
+//     @include on-tablet {
+//         display: grid;
+//         grid-template-columns:
+//         minmax(100px, 1fr)
+//         minmax(300px, 1fr);
+
+//         gap: 60px;
+//         align-items: start;
+//     }
+
+//     @include on-desktop {
+//       grid-template-columns: 1fr;
+//       gap: 60px;
+//     }
+      
+//   }
+
+  // ==========================================
+  // LEFT COLUMN
+  // ==========================================
+
+  &__content {
+    width: 100%;
+    min-width: 0;
+    max-width: none;
+
+    @include on-tablet {
+        width: 100%;
+    }
+  }
+
+  &__heading {
+    max-width: 800px;
+    margin: 0 0 34px;
+
+    color: $text-color;
+
+    font-family: $font;
+    font-size: clamp(48px, 4.3vw, 76px);
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: -3px;
+
+    &__em {
+      color: $accent-color;
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    @include on-tablet {
+      margin-bottom: 35px;
+
+      font-size: clamp(42px, 13vw, 58px);
+      letter-spacing: -2px;
+
+      margin-bottom: 35px;
+
+      font-size: clamp(42px, 13vw, 58px);
+      letter-spacing: -2px;
+    }
+
+    @include on-desktop {
+      max-width: 700px;
+      font-size: clamp(48px, 8vw, 72px);
+    }
+  }
+
+  &__text {
+    max-width: 810px;
+
+    &__paragraph {
+      margin: 0 0 27px;
+
+      color: $text-muted-color;
+
+      font-family: $font-body;
+      font-size: 15px;
+      line-height: 1.95;
+      letter-spacing: -0.2px;
+
+      strong {
+        color: $text-color;
+        font-weight: 700;
+      }
+
+      @include on-tablet {
+        margin-bottom: 22px;
+  
+        font-size: 16px;
+        line-height: 1.75;
+      }
+    }
+
+
+    @include on-desktop {
+      max-width: 900px;
+    }
+  }
+
+  // ==========================================
+  // FEATURES
+  // ==========================================
+
+  .features {
+    margin: 42px 0;
+
+    border: 1px solid $border-color;
+
+    @include on-tablet {
+        display: flex;
+    }
+  }
+
+  .feature {
+    min-height: 190px;
+    padding: 34px 26px 28px;
+
+    border-right: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
+
+    &:nth-child(2n) {
+      border-right: 0;
+    }
+
+    &:nth-last-child(-n + 2) {
+      border-bottom: 0;
+    }
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 30px;
+      height: 30px;
+      margin-bottom: 22px;
+
+      font-size: 25px;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+
+      color: $text-color;
+
+      font-family: $font-body;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    p {
+      max-width: 320px;
+      margin: 0;
+
+      color: $text-muted-color;
+
+      font-family: $font-body;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    @include on-tablet {
+      min-height: auto;
+
+      border-right: 0;
+      border-bottom: 1px solid $border-color;
+
+      &:nth-child(2n) {
+        border-right: 0;
+      }
+
+      &:nth-last-child(-n + 2) {
+        border-bottom: 1px solid $border-color;
+      }
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  // ==========================================
+  // RIGHT COLUMN
+  // ==========================================
+
+  &__sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include on-tablet {
+      display: flex;
+    }
+
+    @include on-desktop {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
