@@ -85,7 +85,7 @@ export const Experience = () => {
 
         {/* Timeline */}
         <div className={styles.timeline}>
-          {experiences.map((experience, index) => (
+          {experiences.map((experience) => (
             <article
               className={styles.experienceItem}
               key={`${experience.company}-${experience.date}`}

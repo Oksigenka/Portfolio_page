@@ -38,11 +38,13 @@ const whatILookFor: InfoItem[] = [
   },
   {
     label: 'LinkedIn',
-    value: 'https://www.linkedin.com/in/kseniia-karpenko-109b78291/',
+    value: 'http91/',
+    // value: 'https://www.linkedin.com/in/kseniia-karpenko-109b78291/',
   },
   {
     label: 'GitHub',
-    value: 'https://github.com/Oksigenka?tab=repositories',
+    value: 'http',
+    // value: 'https://github.com/Oksigenka?tab=repositories',
   },
   {
     label: 'Start date',

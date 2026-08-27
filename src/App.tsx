@@ -1,17 +1,16 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import styles from './App.module.scss';
 import { TopBar } from './components/TopBar';
 import { Menu } from './components/Menu';
-import { Header } from './components/Header';
 import { About } from './components/About';
 import { Experience } from './components/Experience';
 import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { Education } from './components/Education';
 import { Hobbies } from './components/Hobbies';
-import { Hire } from './components/Hire';
+import { Contact } from './components/Contact';
 import Layout from './components/Layout/Layout';
 
 export const App = () => {
@@ -49,7 +48,7 @@ export const App = () => {
               </Route>
               <Route path="skills" element={<Skills />} />
               <Route path="hobbies" element={<Hobbies />} />
-              <Route path="hire" element={<Hire />} />
+              <Route path="contact" element={<Contact />} />
               <Route
                 path="*"
                 element={

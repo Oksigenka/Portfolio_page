@@ -3,7 +3,12 @@ import styles from './TopBar.module.scss';
 import { useNavigate } from 'react-router-dom';
 import { Nav } from '../Nav';
 
-export const TopBar = ({ isMenuOpen, setMenuOpen }) => {
+type Props = {
+  isMenuOpen: boolean;
+  setMenuOpen: (value: boolean) => void;
+};
+
+export const TopBar: React.FC<Props> = ({ isMenuOpen, setMenuOpen }) => {
   const navigate = useNavigate();
 
   const goFavorites = (e: React.MouseEvent) => {

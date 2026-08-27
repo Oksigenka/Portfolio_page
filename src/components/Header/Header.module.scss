@@ -1,259 +1,480 @@
 .header {
-    @include content-padding-in-line;
+  @include content-padding-in-line;
+
+  margin-top: 25px;
+  margin-bottom: 70px;
   
-    margin-top: 50px;
-    margin-bottom: 100px;
-
-  @include on-tablet {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    margin-top: 60px;
-  }
-
-  &__left {
-    margin-bottom: 50px;
     @include on-tablet {
-        max-width: 540px;
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
+    }
+    
+    @include on-desktop {
+        margin-top: 50px;
+        gap: 40px;
+        margin-bottom: 100px;
+    }
+
+  // ==========================================
+  // LEFT CARD
+  // ==========================================
+
+  &__cardWrapper {
+    position: relative;
+    
+    @include on-tablet {
+    //   min-width: 450px;
     }
 
     @include on-desktop {
-        max-width: 700px;
+    //   min-width: 550px;
     }
   }
-
-  &__tag {  
-    font-size: 12px;
-    font-family: $font-mono;
-    letter-spacing: 0.15rem;
-    text-transform: uppercase;
-    color: $accent-color;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-
-    &::before {
-      content: '';
-      display: inline-block;
-      width: 50px;
-      height: 1px;
-      background-color: $accent-color;
-      margin-right: 10px;
-    }
-  }
-
-  &__title {
-    font-family: $font;
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    line-height: 1.05;
-    letter-spacing: -0.02em;
-    margin: 0;
-    margin-bottom: 1.5rem;
-    color: $text-color;
-    
-    span {
-        color: $accent-color;
-        font-style: italic;
-    }
-
-    @include on-tablet {
-        font-size: clamp(3rem, 5vw, 5.5rem);
-    }
-  }
-
-  &__description {
-    font-size: 13px;
-    color: $text-muted-color;
-    line-height: 1.8;
-    max-width: 600px;
-    margin-bottom: 1rem;
-
-    @include on-tablet {
-        font-size: 17px;
-    }
-  }
-
-  &__actions {
-    margin-top: 30px;
-    display: flex;
-    gap: 16px;
-  }
-
-    &__right {
-        position: relative;
-    }
 
   &__accent {
     position: absolute;
-    top: 12px;
-    left: 0px;
-    right: 0px;
-    bottom: -12px;
-    border: 1px solid $accent-color;
-    opacity: 0.3;
-    pointer-events: none;
+    top: 0;
+    left: 0;
 
-    z-index: 10;
+    width: 3px;
+    height: 100%;
+
+    background: $accent-color;
+
+    z-index: 2;
+  }
+
+  &__card {
+    position: relative;
+
+    padding: 30px 20px 25px;
+    min-height: auto;
+    
+    background: $background-surface-color;
+    border: 1px solid $border-color;
 
     @include on-tablet {
-        top: 24px;
-        left: 24px;
-        right: -24px;
-        bottom: -24px;
+        min-height: auto;
+        padding: 30px 20px 30px 25px;
+    }
+
+    @include on-desktop {
+        min-height: auto;
+        padding: 45px 48px 45px 48px;
     }
   }
 
-    &__card {
-        width: 80%;
-        height: 280px;
-        margin: 0 auto;
-        padding: 75px 15px 25px 15px;
-        background: $background-surface-color;
-        border: 0.5px solid $background-card-color;
-        position: relative;
+  // ==========================================
+  // PROFILE
+  // ==========================================
 
-        @include on-tablet {
-            width: 340px;
-            height: 360px;
-            padding: 75px 15px 25px 15px;
-        }
-    }
-
-    &__avatar {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        font-size: 70px;
-        font-weight: 500;
-        font-family: $font;
-
-        background: linear-gradient(135deg, $accent-purple-color, $accent-color);
-        margin: 0 auto 30px;
-        color: $background-color;
-    }
-
-    &__status {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-
-        padding: 10px 15px;
-        width: fit-content;
-        margin: 0 auto 30px;
-        font-family: $font-mono;
-        font-size: 12px;
-        background-color: rgba(200, 245, 66, 0.08);
-        border: 1px solid rgba(200, 245, 66, 0.2);
-        color: $accent-color;
-    }
-
-    &__dot {
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: $accent-color;
-    }
-
-    &__location {
-        font-family: $font-mono;
-        font-size: 13px;
-        color: $text-dim-color;
-        text-align: center;
-        letter-spacing: 0.05em;
-    }
-
-    &__stats {
-        position: absolute;
-        bottom: -1.5rem;
-        left: -0.8rem;
-        background: $background-surface-color;
-        border: 1px solid $border-color;
-        padding: 0.5rem 1rem;
-        display: flex;
-        gap: 1rem;
-        z-index: 20;
-        
-        @include on-tablet {
-            bottom: -3rem;
-            left: -3rem;
-            padding: 1rem 1.5rem;
-            gap: 2rem;
-        }
-
-        &__item {
-            display: flex;
-            flex-direction: column;
-        }
-
-        &__num {
-            font-family: $font;
-            font-size: 1.5rem;
-            color: $text-color;
-            line-height: 1;
-                
-            @include on-tablet {
-                font-size: 2.5rem;
-            }
-        }
-
-        &__label {
-            font-size: 9px;
-            color: $text-muted-color;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            margin-top: 0.25rem;
-
-            @include on-tablet {
-                font-size: 11px;
-            }
-        }
-    }
-}
-
-.btn {
-  cursor: pointer;
-  font-family: $font-mono;
-  font-size: 10px;
+  &__profile {
+    display: flex;
+    align-items: center;
+    gap: 30px;
 
     @include on-tablet {
-        font-size: 13px;
+      align-items: flex-start;
+      gap: 18px;
     }
-}
+  }
 
-.btn--primary {
-    padding: 0.5rem 1.3rem;
-    background: $accent-color;
-    border: 0.5px solid $accent-color;
-    color: #0a0a0f;
-    text-decoration: none;
-    letter-spacing: 0.05em;
-    font-weight: 500;
-    transition: opacity 0.2s;
+  &__avatar {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+      135deg,
+      $accent-purple-color,
+      $accent-color
+    );
+
+    color: $background-color;
+
+    font-family: $font;
+    font-size: 42px;
+    font-weight: 400;
+
+    @include on-tablet {
+      width: 70px;
+      height: 70px;
+
+      font-size: 30px;
+    }
+  }
+
+  &__identity {
+    min-width: 0;
+  }
+
+  &__tag {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 8px;
+
+    color: $accent-color;
+
+    font-family: $font-mono;
+    font-size: 7px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+
+    &::before {
+      content: '';
+
+      width: 25px;
+      height: 1px;
+
+      margin-right: 8px;
+
+      background: $accent-color;
+    }
+
+    @include on-tablet {
+        margin-bottom: 12px;
+
+        font-size: 12px;
+        letter-spacing: 2px;
+
+        &::before {
+            width: 50px;
+
+            margin-right: 15px;
+        }
+    }
+  }
+
+  &__name {
+    margin: 0;
+
+    color: $text-color;
+    white-space: normal;
+
+    font-family: $font;
+    font-size: 22px;
+    // font-size: clamp(27px, 8vw, 38px);
+    font-weight: 400;
+    line-height: 1;
+
+    white-space: nowrap;
+
+    &__span {
+      color: $accent-color;
+      font-style: italic;
+    }
+
+    @include on-tablet {
+      font-size: clamp(32px, 6vw, 42px);
+    }
+
+    @include on-tablet {
+      font-size: clamp(36px, 3vw, 48px);
+    }
+  }
+
+  // ==========================================
+  // STATUS
+  // ==========================================
+
+  &__status {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 8px 12px;
+    
+    background: rgba(200, 245, 66, 0.06);
+    border: 1px solid rgba(200, 245, 66, 0.2);
+    
+    color: $accent-color;
+    
+    font-family: $font-mono;
+    font-size: 10px;
     
     @include on-tablet {
-        padding: 0.9rem 2rem;
-    }
-}
+        padding: 11px 18px;
 
-.btn--secondary {
-    padding: 0.5rem 1.3rem;
-    border: 0.5px solid $border-hover-color;
-    background: transparent;
-    color: $text-muted-color;
-    text-decoration: none;
-    letter-spacing: 0.05em;
-    font-weight: 500;
-    transition: border-color 0.2s, color 0.2s;
+      font-size: 12px;
+    }
+  }
+
+  &__dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: $accent-color;
+  }
+
+  // ==========================================
+  // DIVIDER
+  // ==========================================
+
+  &__divider {
+    width: 100%;
+    height: 1px;
+
+    margin: 25px 0;
+
+    background: $border-color;
 
     @include on-tablet {
-        padding: 0.9rem 2rem;
+      margin: 30px 0;
     }
-}
+  }
 
+  // ==========================================
+  // CONTACTS
+  // ==========================================
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+
+    @include on-tablet {
+      gap: 23px;
+    }
+  }
+
+  &__contact {
+    display: grid;
+
+    grid-template-columns: 20px 70px minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 6px;
+
+    @include on-tablet {
+      grid-template-columns: 30px 100px minmax(0, 1fr);
+
+      gap: 10px;
+    }
+  }
+
+  &__contactIcon {
+    color: $accent-color;
+
+    font-family: $font-mono;
+    font-size: 12px;
+    text-align: left;
+
+    @include on-tablet {
+      font-size: 14px;
+    }
+  }
+
+  &__contactLabel {
+    color: $text-dim-color;
+
+    font-family: $font-mono;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    @include on-tablet {
+      font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+  }
+
+  &__contactValue {
+    min-width: 0;
+
+    overflow: hidden;
+
+    color: $text-muted-color;
+
+    font-family: $font-body;
+    font-size: 11px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    @include on-tablet {
+      font-size: 14px;
+    }
+  }
+
+  // ==========================================
+  // STATS
+  // ==========================================
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-top: 30px;
+    padding-top: 20px;
+
+    border-top: 1px solid $border-color;
+
+    @include on-tablet {
+      margin-top: 35px;
+      padding-top: 25px;
+    }
+  }
+
+  &__statsItem {
+    display: flex;
+    flex-direction: column;
+
+    // min-height: 75px;
+
+    padding: 0 12px;
+
+    border-right: 1px solid $border-color;
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      border-right: 0;
+      padding-right: 0;
+    }
+
+    @include on-tablet {
+      padding: 0 25px;
+    }
+
+    &__strong {
+      color: $text-color;
+
+      font-family: $font;
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1;
+
+      @include on-tablet {
+        font-size: 38px;
+        letter-spacing: 1px;
+      }
+    }
+
+    &__span {
+      margin-top: 8px;
+
+      color: $text-muted-color;
+
+      font-family: $font-body;
+      font-size: 8px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+
+      @include on-tablet {
+        font-size: 11px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  // ==========================================
+  // RIGHT CONTENT
+  // ==========================================
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 40px;
+
+    @include on-tablet {
+      padding: 0;
+    }
+
+    &__paragraph {
+    // max-width: 600px;
+
+        margin: 0 0 15px;
+
+        color: $text-muted-color;
+
+        font-family: $font-body;
+        font-size: 16px;
+        line-height: 1.75;
+
+        &:first-child {
+        color: $text-color;
+        }
+
+        &:last-child {
+        margin-bottom: 0;
+        }
+
+        @include on-tablet {
+            // max-width: 850px;
+
+            margin-bottom: 15px;
+
+            font-size: 17px;
+            line-height: 1.4;
+        }
+
+        @include on-desktop {
+            // max-width: 850px;
+
+            // margin-bottom: 15px;
+
+            font-size: 19px;
+            line-height: 1.4;
+        }
+
+        &__strong {
+            color: $text-color;
+            font-weight: 700;
+        }
+    }
+  }
+
+  &__heading {
+    max-width: 800px;
+    margin: 0 0 34px;
+
+    color: $text-color;
+
+    font-family: $font;
+    font-size: clamp(48px, 4.3vw, 76px);
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: -3px;
+
+    &__em {
+      color: $accent-color;
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    @include on-tablet {
+      margin-bottom: 35px;
+
+      font-size: clamp(42px, 13vw, 58px);
+      letter-spacing: -2px;
+
+      margin-bottom: 20px;
+
+      font-size: clamp(42px, 13vw, 58px);
+      letter-spacing: -2px;
+    }
+
+    @include on-desktop {
+      max-width: 700px;
+      font-size: clamp(48px, 8vw, 72px);
+    }
+  }
+
+ 
+}

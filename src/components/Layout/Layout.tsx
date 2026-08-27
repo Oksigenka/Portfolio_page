@@ -5,7 +5,7 @@ import { Skills } from "../Skills";
 import { Projects } from "../Projects";
 import { Education } from "../Education";
 import { Hobbies } from "../Hobbies";
-import { Hire } from "../Hire";
+import { Contact  } from "../Contact";
 import { About } from "../About";
 
 export default function Layout() {
@@ -18,7 +18,7 @@ export default function Layout() {
       <Projects />
       <Skills />
       <Hobbies />
-      <Hire />
+      {/* <Contact /> */}
       <Outlet />
     </>
   );
