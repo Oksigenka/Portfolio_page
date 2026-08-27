@@ -18,7 +18,7 @@ export default function Layout() {
       <Projects />
       <Skills />
       <Hobbies />
-      {/* <Contact /> */}
+      <Contact />
       <Outlet />
     </>
   );
