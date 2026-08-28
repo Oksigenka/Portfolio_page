@@ -1,19 +1,20 @@
 .header {
   @include content-padding-in-line;
 
-  margin-top: 25px;
+  margin-top: 100px;
   margin-bottom: 70px;
   
     @include on-tablet {
+      // margin-top: 25px;
       display: flex;
       gap: 20px;
       justify-content: space-between;
     }
     
     @include on-desktop {
-        margin-top: 50px;
-        gap: 40px;
-        margin-bottom: 100px;
+      // margin-top: 100px;
+      gap: 40px;
+      margin-bottom: 100px;
     }
 
   // ==========================================
@@ -75,7 +76,7 @@
     gap: 30px;
 
     @include on-tablet {
-      align-items: flex-start;
+      // align-items: flex-start;
       gap: 18px;
     }
   }
@@ -87,29 +88,36 @@
     align-items: center;
     justify-content: center;
 
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
 
     border-radius: 50%;
 
-    background: linear-gradient(
-      135deg,
-      $accent-purple-color,
-      $accent-color
-    );
+    // background: linear-gradient(
+    //   135deg,
+    //   $accent-purple-color,
+    //   $accent-color
+    // );
 
-    color: $background-color;
+    // color: $background-color;
 
-    font-family: $font;
-    font-size: 42px;
-    font-weight: 400;
+    // font-family: $font;
+    // font-size: 42px;
+    // font-weight: 400;
 
     @include on-tablet {
-      width: 70px;
-      height: 70px;
+      width: 100px;
+      height: 100px;
 
-      font-size: 30px;
+      // font-size: 30px;
     }
+  }
+
+  &__avatarIcon {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 50%;
   }
 
   &__identity {
@@ -189,9 +197,9 @@
   &__status {
     display: inline-flex;
     align-items: center;
-    gap: 9px;
-
-    padding: 8px 12px;
+    gap: 5px;
+    
+    padding: 4px 6px;
     
     background: rgba(200, 245, 66, 0.06);
     border: 1px solid rgba(200, 245, 66, 0.2);
@@ -202,7 +210,8 @@
     font-size: 10px;
     
     @include on-tablet {
-        padding: 11px 18px;
+      gap: 7px;
+      padding: 8px 12px;
 
       font-size: 12px;
     }
@@ -298,6 +307,8 @@
 
     color: $text-muted-color;
 
+    text-decoration: none;
+
     font-family: $font-body;
     font-size: 11px;
 
@@ -305,7 +316,22 @@
     white-space: nowrap;
 
     @include on-tablet {
-      font-size: 14px;
+      font-size: 16px;
+    }
+  }
+
+  &__contactValueIcon {
+    width: 30px;
+  }
+
+  &__contactLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    @include on-tablet {
+      gap: 10px;
     }
   }
 
@@ -317,14 +343,14 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 
-    margin-top: 30px;
-    padding-top: 20px;
+    margin-top: 20px;
+    padding-top: 15px;
 
     border-top: 1px solid $border-color;
 
     @include on-tablet {
-      margin-top: 35px;
-      padding-top: 25px;
+      margin-top: 25px;
+      padding-top: 20px;
     }
   }
 
@@ -394,6 +420,7 @@
 
     @include on-tablet {
       padding: 0;
+      justify-content: center;
     }
 
     &__paragraph {
@@ -420,7 +447,7 @@
 
             margin-bottom: 15px;
 
-            font-size: 17px;
+            font-size: 19px;
             line-height: 1.4;
         }
 
@@ -461,7 +488,7 @@
     @include on-tablet {
       margin-bottom: 35px;
 
-      font-size: clamp(42px, 13vw, 58px);
+      font-size: clamp(43px, 13vw, 58px);
       letter-spacing: -2px;
 
       margin-bottom: 20px;

@@ -1,5 +1,4 @@
 import styles from './About.module.scss';
-import { InfoCard, type InfoItem } from './InfoCard';
 
 interface Feature {
   icon: string;
@@ -7,75 +6,30 @@ interface Feature {
   description: string;
 }
 
-const quickFacts: InfoItem[] = [
-  {
-    label: 'Location',
-    value: 'Eindhoven, NL',
-  },
-  {
-    label: 'Email',
-    value: 'kseniia.karpenko.dev@gmail.com',
-  },
-  {
-    label: 'Availability',
-    value: 'Open to offers',
-    highlight: true,
-  },
-  {
-    label: 'Mobile',
-    value: '+(31) 6 29 35 61 36',
-  },
-  {
-    label: 'Preferred stack',
-    value: 'React / TypeScript',
-  },
-];
-
-const whatILookFor: InfoItem[] = [
-  {
-    label: 'Work style',
-    value: 'Hybrid / Remote',
-  },
-  {
-    label: 'LinkedIn',
-    value: 'http91/',
-    // value: 'https://www.linkedin.com/in/kseniia-karpenko-109b78291/',
-  },
-  {
-    label: 'GitHub',
-    value: 'http',
-    // value: 'https://github.com/Oksigenka?tab=repositories',
-  },
-  {
-    label: 'Start date',
-    value: 'Immediately',
-  },
-];
-
 const features: Feature[] = [
   {
-    icon: '⚡',
-    title: 'Performance First',
+    icon: '👩‍💻',
+    title: 'QUICK LEARNER',
     description:
-      'Every millisecond matters. I build with Lighthouse scores in mind.',
+      'I pick up new technologies quickly — e.g., taught myself C in six months and built a full-fledged game.',
   },
   {
-    icon: '♿',
-    title: 'Accessible by Default',
+    icon: '💻',
+    title: 'CROSS-FUNCTIONAL AND COMMUNICATION SKILLS',
     description:
-      'WCAG 2.1 AA and semantic HTML are non-negotiables.',
+      'I work effectively with backend developers, designers, QA specialists, and clients, easily finding common ground with people from different fields.',
   },
   {
-    icon: '◈',
-    title: 'Design Driven',
+    icon: '🧩',
+    title: 'ATTENTION TO DETAIL',
     description:
-      'I care about thoughtful details and consistent visual systems.',
+      'I pay special attention to code quality and UI.',
   },
   {
-    icon: '⌘',
-    title: 'Clean Code',
+    icon: '💻',
+    title: 'ADAPTABILITY',
     description:
-      'Simple, maintainable and scalable solutions are always the goal.',
+      'I easily adapt to new technologies and work environments, paying close attention to detail. ',
   },
 ];
 
@@ -87,7 +41,7 @@ export const About = () => {
         <div className={styles.sectionLabel}>
           <span>01</span>
           <span className={styles.sectionLabel__dash} />
-          <span>Personal information</span>
+          <span>Competences</span>
           <span className={styles.sectionLabel__line} />
         </div>
 
@@ -122,19 +76,6 @@ export const About = () => {
                 of high-quality products for users.
               </p>
             </div> */}
-
-            {/* RIGHT COLUMN */}
-          <aside className={styles.aboutCard__sidebar}>
-            <InfoCard
-              title="QUICK FACTS"
-              items={quickFacts}
-            />
-
-            <InfoCard
-              title="WHAT I LOOK FOR"
-              items={whatILookFor}
-            />
-          </aside>
 
             <div className={styles.features}>
               {features.map((feature) => (

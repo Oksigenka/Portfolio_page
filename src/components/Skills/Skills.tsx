@@ -2,7 +2,6 @@ import styles from './Skills.module.scss';
 
 interface Skill {
   name: string;
-  level: number;
 }
 
 interface SkillCategory {
@@ -14,63 +13,52 @@ const skillCategories: SkillCategory[] = [
   {
     title: 'CORE',
     skills: [
-      { name: 'React / Next.js', level: 92 },
-      { name: 'TypeScript', level: 92 },
-      { name: 'Redux', level: 92 },
-      { name: 'JavaScript (ES2024)', level: 98 },
-      { name: 'HTML5 / Semantics', level: 99 },
+      { name: 'React / Next.js' },
+      { name: 'TypeScript'},
+      { name: 'Redux' },
+      { name: 'JavaScript (ES2024)' },
+      { name: 'HTML5 / Semantics' },
     ],
   },
   {
-    title: 'STYLING',
+    title: 'STYLING & FRAMEWORKS',
     skills: [
-      { name: 'CSS / Sass', level: 96 },
-      { name: 'BEM', level: 80 },
-      { name: 'Tailwind', level: 94 },
-      { name: 'Material UI', level: 70 },
+      { name: 'CSS / Sass' },
+      { name: 'BEM' },
+      { name: 'Tailwind' },
+      { name: 'Material UI' },
+      { name: 'Angular' },
+      { name: 'VUE' },
     ],
   },
   {
     title: 'APIS & RUNTIME',
     skills: [
-      { name: 'REST API', level: 90 },
-      { name: 'WebSockets', level: 85 },
-      { name: 'Node.js', level: 80 },
-      { name: 'FastAPI', level: 88 },
-    ],
-  },
-  {
-    title: 'FRAMEWORKS',
-    skills: [
-      { name: 'Angular', level: 72 },
-      { name: 'VUE', level: 78 },
+      { name: 'REST API' },
+      { name: 'WebSockets' },
+      { name: 'Node.js' },
+      { name: 'FastAPI' },
     ],
   },
   {
     title: 'TOOLS',
     skills: [
-      { name: 'Git', level: 72 },
-      { name: 'Vite', level: 78 },
-      { name: 'Webpack', level: 78 },
-      { name: 'ESLint', level: 78 },
-      { name: 'Prettier', level: 78 },
-    ],
-  },
-  {
-    title: 'FAMILIAR WITH',
-    skills: [
-      { name: 'Python', level: 72 },
-      { name: 'SQL', level: 72 },
-      { name: 'Docker', level: 78 },
+      { name: 'Git' },
+      { name: 'Vite' },
+      { name: 'Webpack' },
+      { name: 'Python' },
+      { name: 'SQL' },
+      { name: 'Docker' },
+      { name: 'ESLint & Prettier' },
     ],
   },
   {
     title: 'LANGUAGES',
     skills: [
-      { name: 'Ukrainian', level: 99 },
-      { name: 'English', level: 70 },
-      { name: 'Slovak', level: 80 },
-      { name: 'Dutch', level: 25 },
+      { name: 'Ukrainian (native)' },
+      { name: 'English (B2)' },
+      { name: 'Slovak (C1)' },
+      { name: 'Dutch (A2)' },
     ],
   },
 ];
@@ -93,21 +81,21 @@ export const Skills = () => {
 
         {/* Heading */}
         <h2 className={styles.skills__heading}>
-          Technical <em>skills</em>.
+          Technical <em className={styles.skills__heading__em}>skills</em>.
         </h2>
 
         {/* Skills */}
-        <div className={styles.skillsGrid}>
+        <div className={styles.skills__grid}>
           {skillCategories.map((category) => (
             <div
-              className={styles.skillCategory}
+              className={styles.skills__category}
               key={category.title}
             >
-              <h3 className={styles.skillCategory__title}>
+              <h3 className={styles.skills__category__title}>
                 {category.title}
               </h3>
 
-              <div className={styles.skillList}>
+              <div className={styles.skills__list}>
                 {category.skills.map((skill) => (
                   <div
                     className={styles.skill}
@@ -117,19 +105,6 @@ export const Skills = () => {
                       <span className={styles.skill__name}>
                         {skill.name}
                       </span>
-
-                      <span className={styles.skill__level}>
-                        {skill.level}%
-                      </span>
-                    </div>
-
-                    <div className={styles.skill__bar}>
-                      <div
-                        className={styles.skill__progress}
-                        style={{
-                          width: `${skill.level}%`,
-                        }}
-                      />
                     </div>
                   </div>
                 ))}

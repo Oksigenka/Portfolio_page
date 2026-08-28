@@ -47,7 +47,7 @@
     align-items: center;
     gap: 10px;
 
-    margin-bottom: 38px;
+    margin-bottom: 22px;
 
     color: $text-dim-color;
 
@@ -56,11 +56,35 @@
     letter-spacing: 2px;
     text-transform: uppercase;
 
+    @include on-tablet {
+      margin-bottom: 20px;
+
+      font-size: 15px;
+      letter-spacing: 1.5px;
+    }
+
+    @include on-desktop {
+    //   margin-bottom: 30px;
+    //   padding: 20px 24px 60px;
+    }
+
     &__dash {
       width: 20px;
       height: 1px;
 
       background: $border-color;
+    }
+
+    &__line {
+      width: 100px;
+      height: 1px;
+      margin-left: 2px;
+
+      background: $border-color;
+
+      @include on-tablet {
+        width: 50px;
+      }
     }
   }
 
@@ -192,7 +216,7 @@
 
     width: 100%;
     min-height: $footer-height;
-    margin-top: 100px;
+    margin-top: 30px;
 
     padding: 0 68px;
 
@@ -266,7 +290,7 @@
   // ==========================================
 
   @include on-desktop {
-    min-height: 100vh;
+    min-height: 90vh;
 
     padding-top: 50px;
 
@@ -300,4 +324,110 @@
       padding: 0 68px;
     }
   }
+
+  // ==========================================
+// MOBILE
+// ==========================================
+
+@media (max-width: 650px) {
+  min-height: 100vh;
+  padding-top: 35px;
+
+  &__content {
+    padding: 0 20px;
+  }
+
+  // SECTION LABEL
+  .sectionLabel {
+    gap: 8px;
+    margin-bottom: 18px;
+
+    font-size: 10px;
+    letter-spacing: 1.5px;
+
+    &__dash {
+      width: 15px;
+    }
+
+    &__line {
+      width: 35px;
+      margin-left: 0;
+    }
+  }
+
+  // HEADING
+  &__heading {
+    max-width: 100%;
+
+    font-size: clamp(42px, 13vw, 58px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+  }
+
+  // DESCRIPTION
+  &__description {
+    max-width: 340px;
+    margin-top: 24px;
+
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  // EMAIL BUTTON
+  &__email {
+    width: 100%;
+    min-width: 0;
+    min-height: 58px;
+
+    margin-top: 30px;
+    padding: 0 20px;
+
+    font-size: 14px;
+    letter-spacing: 0.7px;
+  }
+
+  // SOCIAL LINKS
+  &__links {
+    width: 100%;
+
+    flex-wrap: wrap;
+    gap: 10px;
+
+    margin-top: 25px;
+  }
+
+  &__link {
+    flex: 1 1 calc(50% - 5px);
+
+    min-width: 0;
+    height: 50px;
+    padding: 0 12px;
+
+    font-size: 12px;
+  }
+
+  // FOOTER
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+
+    min-height: auto;
+
+    margin-top: 50px;
+    padding: 25px 20px;
+
+    font-size: 10px;
+    text-align: center;
+
+    span {
+      &:nth-child(1),
+      &:nth-child(2),
+      &:nth-child(3) {
+        justify-self: auto;
+      }
+    }
+  }
+}
 }

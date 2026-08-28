@@ -10,7 +10,13 @@ export const Header = () => {
         <div className={styles.header__card}>
           {/* PROFILE */}
           <div className={styles.header__profile}>
-            <div className={styles.header__avatar}>KK</div>
+            <div className={styles.header__avatar}>
+              <img
+                  src="./icons/avatar.png"
+                  alt="GitHub"
+                  className={styles.header__avatarIcon}
+                />
+            </div>
 
             <div className={styles.header__identity}>
               <div className={styles.header__tag}>
@@ -42,35 +48,64 @@ export const Header = () => {
             </div>
 
             <div className={styles.header__contact}>
-              <span className={styles.header__contactIcon}>⌕</span>
+              <span className={styles.header__contactIcon}>☎</span>
               <span className={styles.header__contactLabel}>Phone</span>
+              <a
+                href="tel:+31629356136"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.header__contactValue}
+              >
+                <span className={styles.header__contactValue}>
+                  +31 6 29 35 61 36
+                </span>
+              </a>
+            </div>
+
+            <div className={styles.header__contact}>
+              <span className={styles.header__contactIcon}>▣</span>
+              <span className={styles.header__contactLabel}>Date of birth</span>
               <span className={styles.header__contactValue}>
-                +31 6 29 35 61 36
+                21.02.2005
               </span>
             </div>
 
             <div className={styles.header__contact}>
-              <span className={styles.header__contactIcon}>●</span>
+              <span className={styles.header__contactIcon}>⌖</span>
               <span className={styles.header__contactLabel}>Location</span>
               <span className={styles.header__contactValue}>
                 Eindhoven, Netherlands
               </span>
             </div>
 
-            <div className={styles.header__contact}>
-              <span className={styles.header__contactIcon}>in</span>
-              <span className={styles.header__contactLabel}>LinkedIn</span>
-              <span className={styles.header__contactValue}>
-                linkedin.com/in/kseniia-karpenko
-              </span>
-            </div>
+            <div className={styles.header__contactLogo}>
+              <a
+                href="https://linkedin.com/in/kseniia-karpenko"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="./icons/linkedin.png"
+                  alt="LinkedIn"
+                  className={styles.header__contactValueIcon}
+                />
+              </a>
+            {/* </div>
 
-            <div className={styles.header__contact}>
-              <span className={styles.header__contactIcon}>⌁</span>
-              <span className={styles.header__contactLabel}>GitHub</span>
-              <span className={styles.header__contactValue}>
-                github.com/kseniia-karpenko
-              </span>
+            <div className={styles.header__contact}> */}
+              {/* <span className={styles.header__contactIcon}>⌁</span>
+              <span className={styles.header__contactLabel}>GitHub</span> */}
+              <a
+                href="https://github.com/kseniia-karpenko"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="./icons/github.png"
+                  alt="GitHub"
+                  className={styles.header__contactValueIcon}
+                />
+              </a>
             </div>
 
             {/* <div className={styles.header__contact}>

@@ -69,7 +69,7 @@ export const Experience = () => {
 
         {/* Section label */}
         <div className={styles.sectionLabel}>
-          <span>03</span>
+          <span>05</span>
 
           <span className={styles.sectionLabel__dash} />
 
@@ -80,7 +80,7 @@ export const Experience = () => {
 
         {/* Heading */}
         <h2 className={styles.experience__heading}>
-          Work <em>experience</em>.
+          Work <em className={styles.experience__heading__em}>experience</em>.
         </h2>
 
         {/* Timeline */}

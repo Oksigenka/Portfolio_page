@@ -113,20 +113,17 @@ export const Projects = () => {
     <section className={styles.projects} id="projects">
       <div className={styles.projects__container}>
 
-        {/* Section label */}
         <div className={styles.sectionLabel}>
-          <span>04</span>
+          <span>02</span>
           <span className={styles.sectionLabel__dash} />
           <span>WHAT I'VE BUILT</span>
           <span className={styles.sectionLabel__line} />
         </div>
 
-        {/* Heading */}
         <h2 className={styles.projects__heading}>
-          Selected <em>projects</em>.
+          Selected <em className={styles.projects__heading__em}>projects</em>.
         </h2>
 
-        {/* Featured project */}
         <article className={styles.featured}>
           <div className={styles.featured__content}>
             <span className={styles.featured__label}>
@@ -152,14 +149,14 @@ export const Projects = () => {
             <div className={styles.featured__actions}>
               <a
                 href={featuredProject.liveUrl}
-                className={styles.projectButton}
+                className={styles.featured__actions__button}
               >
                 Live Demo →
               </a>
 
               <a
                 href={featuredProject.githubUrl}
-                className={styles.projectButton}
+                className={styles.featured__actions__button}
               >
                 GitHub →
               </a>
@@ -182,22 +179,21 @@ export const Projects = () => {
           </div>
         </article>
 
-        {/* Other projects */}
-        <div className={styles.projectGrid}>
+        <div className={styles.projects__grid}>
           {projects.map((project) => (
             <article
-              className={styles.projectCard}
+              className={styles.projects__card}
               key={project.number}
             >
-              <span className={styles.projectCard__number}>
+              <span className={styles.projects__card__number}>
                 {project.number}
               </span>
 
-              <h3 className={styles.projectCard__title}>
+              <h3 className={styles.projects__card__title}>
                 {project.title}
               </h3>
 
-              <p className={styles.projectCard__description}>
+              <p className={styles.projects__card__description}>
                 {project.description}
               </p>
 
@@ -209,13 +205,15 @@ export const Projects = () => {
                 ))}
               </div>
 
-              <div className={styles.projectCard__actions}>
+              <div className={styles.projects__card__actions}>
                 {project.liveUrl && (
-                  <a href={project.liveUrl}>Live Demo →</a>
+                  <a href={project.liveUrl} className={styles.projects__card__actions__button}>Live Demo →</a>
                 )}
 
                 {project.githubUrl && (
-                  <a href={project.githubUrl}>GitHub →</a>
+                  <a href={project.githubUrl} className={styles.projects__card__actions__button}>
+                    GitHub →
+                  </a>
                 )}
               </div>
             </article>

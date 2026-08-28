@@ -35,7 +35,7 @@
     align-items: center;
     gap: 10px;
 
-    margin-bottom: 27px;
+    margin-bottom: 22px;
 
     color: $text-dim-color;
 
@@ -43,6 +43,18 @@
     font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
+
+    @include on-tablet {
+      margin-bottom: 20px;
+
+      font-size: 15px;
+      letter-spacing: 1.5px;
+    }
+
+    @include on-desktop {
+    //   margin-bottom: 30px;
+    //   padding: 20px 24px 60px;
+    }
 
     &__dash {
       width: 20px;
@@ -52,11 +64,15 @@
     }
 
     &__line {
-      width: 75px;
+      width: 100px;
       height: 1px;
       margin-left: 2px;
 
       background: $border-color;
+
+      @include on-tablet {
+        width: 50px;
+      }
     }
   }
 

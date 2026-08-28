@@ -13,10 +13,10 @@ export default function Layout() {
     <>
       <Header />
       <About />
-      <Education />
-      <Experience />
       <Projects />
       <Skills />
+      <Education />
+      <Experience />
       <Hobbies />
       <Contact />
       <Outlet />

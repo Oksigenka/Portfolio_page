@@ -8,15 +8,15 @@ interface ContactLink {
 const contactLinks: ContactLink[] = [
   {
     label: '↗ GitHub',
-    href: 'https://github.com/',
+    href: 'https://github.com/Oksigenka',
   },
   {
     label: '↗ LinkedIn',
-    href: 'https://www.linkedin.com/',
+    href: 'https://www.linkedin.com/in/kseniia-karpenko-109b78291/',
   },
   {
-    label: '↗ Twitter / X',
-    href: 'https://x.com/',
+    label: '↗ Instagram',
+    href: 'https://www.instagram.com/k.karpenko_a?igsi=eW0weDQybXRuMHU3&utm_source=qr',
   },
 ];
 
@@ -35,16 +35,16 @@ export const Contact = () => {
         </h2>
 
         <p className={styles.contact__description}>
-          I'm currently open to freelance projects and full-time
+          I'm currently open to full-time opportunities.
           <br className={styles.contact__desktopBreak} />
-          opportunities. Let's make something memorable.
+          Let's make something memorable.
         </p>
 
         <a
           className={styles.contact__email}
-          href="mailto:alex@mercer.dev"
+          href="mailto:kseniia.karpenko.dev@gmail.com"
         >
-          Say hello → alex@mercer.dev
+          Text me → kseniia.karpenko.dev@gmail.com
         </a>
 
         <div className={styles.contact__links}>
@@ -72,11 +72,11 @@ export const Contact = () => {
       </div>
 
       <footer className={styles.footer}>
-        <span>© 2025 Alex Mercer. All rights reserved.</span>
+        <span>© 2026 Kseniia Karpenko. All rights reserved.</span>
 
-        <span>Built with HTML, CSS &amp; vanilla JS.</span>
+        <span>Built with React and Scss &amp; vanilla Ts.</span>
 
-        <span>Amsterdam, Netherlands</span>
+        <span>Eindhoven, Netherlands</span>
       </footer>
     </section>
   );

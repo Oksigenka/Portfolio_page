@@ -1,5 +1,9 @@
 .top_bar {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 
   display: flex;
   align-items: center;
@@ -75,27 +79,46 @@
   }
 
   &__logo_link {
+    flex-shrink: 0;
+
     display: flex;
     align-items: center;
+    justify-content: center;
 
-    @include on-tablet {
-      margin-right: 16px;
-    }
+    width: 50px;
+    height: 50px;
 
-    @include on-desktop {
-      margin-right: 26px;
-    }
+    text-decoration: none;
   }
 
   &__logo {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
     width: 36px;
     height: 36px;
-    margin: 13px 24px;
+    border-radius: 50%;
+
+    background: linear-gradient(
+      135deg,
+      $accent-purple-color,
+      $accent-color
+    );
+
+    color: $background-color;
+
+    font-family: $font;
+    font-size: 20px;
+    font-weight: 400;
     
     @include on-desktop {
-        width: 36px;
-        height: 36px;
-        margin: 13px 30px;
+      width: 36px;
+      height: 36px;
+      // margin: 13px 30px;
     }
 
     @include hover(transform, scale(1.2));
@@ -129,7 +152,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: $accent-color;
+  color: $background-color;
+  background-color: $accent-color;
+  border: 1px solid $background-color;
+  border-radius: 5px;
   font-family: $font-mono;
   
   border: 1px solid $accent-color;
@@ -138,11 +164,18 @@
   padding: 8px 16px;
 
   @include on-desktop {
-    font-size: 16px;
-    padding: 14px 30px;
+    font-size: 19px;
+    font-weight: 500;
+    padding: 11px 25px;
   }
 
   &__text {
     margin: 0;
+  }
+
+  &:hover {
+    background-color: $background-card-color;
+    color: $accent-purple-color;
+    border: 1px solid $accent-purple-color;
   }
 }

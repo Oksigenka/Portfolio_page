@@ -37,6 +37,7 @@
 
 .link {
   position: relative;
+  cursor: pointer;
 
   font-size: 13px;
   font-weight: 500;
@@ -56,11 +57,11 @@
     }
 
   &:hover {
-    color: $text-color;
+    color: $accent-purple-color;
   }
 
   &.active {
-    color: $text-color;
+    color: $accent-purple-color;
   }
 
   &.active::after {

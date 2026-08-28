@@ -13,14 +13,14 @@ const educationItems: EducationItem[] = [
     title: 'BSc. Computer Science',
     institution: 'Technical University of Košice',
     description:
-      'Graduated cum laude. Specialised in interactive media design and web technologies. Thesis on micro-interaction design and user engagement metrics.',
+      'Developed a strong foundation in programming, algorithms, databases, software development, and computer systems. Gained practical experience through academic projects and problem-solving tasks.',
   },
   {
     period: '2024 — 2025',
     title: 'Frontend Course',
     institution: 'Mate Academy',
     description:
-      'Gained proficiency in serverless architectures, Lambda, S3, CloudFront, and deployment pipelines — directly applicable to frontend + infra workflows.',
+      'Focused on modern frontend development, including HTML, CSS, JavaScript, React, responsive design, and Git. Worked on practical projects to develop real-world web development and teamwork skills.',
   },
 ];
 
@@ -30,7 +30,7 @@ export const Education = () => {
       <div className={styles.education__container}>
 
         <div className={styles.sectionLabel}>
-          <span>02</span>
+          <span>04</span>
 
           <span className={styles.sectionLabel__dash} />
 

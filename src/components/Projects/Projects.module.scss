@@ -16,26 +16,18 @@
     box-sizing: border-box;
   }
 
-  // ==========================================
-  // CONTAINER
-  // ==========================================
-
   &__container {
     width: 100%;
     max-width: 1740px;
     margin: 0 auto;
   }
 
-  // ==========================================
-  // SECTION LABEL
-  // ==========================================
-
   .sectionLabel {
     display: flex;
     align-items: center;
     gap: 10px;
 
-    margin-bottom: 27px;
+    margin-bottom: 22px;
 
     color: $text-dim-color;
 
@@ -43,6 +35,18 @@
     font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
+
+    @include on-tablet {
+      margin-bottom: 20px;
+
+      font-size: 15px;
+      letter-spacing: 1.5px;
+    }
+
+    @include on-desktop {
+    //   margin-bottom: 30px;
+    //   padding: 20px 24px 60px;
+    }
 
     &__dash {
       width: 20px;
@@ -52,68 +56,99 @@
     }
 
     &__line {
-      width: 70px;
+      width: 100px;
       height: 1px;
       margin-left: 2px;
 
       background: $border-color;
+
+      @include on-tablet {
+        width: 50px;
+      }
     }
   }
 
-  // ==========================================
-  // HEADING
-  // ==========================================
-
   &__heading {
-    margin: 0 0 65px;
+    max-width: 800px;
+    margin: 0 0 34px;
 
     color: $text-color;
 
     font-family: $font;
-    font-size: clamp(52px, 5vw, 72px);
+    font-size: clamp(48px, 4.3vw, 76px);
     font-weight: 400;
-    line-height: 1;
+    line-height: 0.98;
     letter-spacing: -3px;
 
-    em {
+    &__em {
       color: $accent-color;
-
       font-weight: 400;
       font-style: italic;
     }
+
+    @include on-tablet {
+      margin-bottom: 35px;
+
+      font-size: clamp(42px, 13vw, 58px);
+      letter-spacing: -2px;
+
+      margin-bottom: 35px;
+
+      font-size: clamp(42px, 13vw, 58px);
+      letter-spacing: -2px;
+    }
+
+    @include on-desktop {
+      max-width: 700px;
+      font-size: clamp(48px, 8vw, 72px);
+    }
   }
 
-  // ==========================================
-  // FEATURED PROJECT
-  // ==========================================
-
   .featured {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: block;
 
-    min-height: 455px;
+    @include on-tablet {
+      display: grid;
+      grid-template-columns: 1fr;
 
-    border: 1px solid $border-color;
+      min-height: 455px;
 
-    // ------------------------------------------
-    // LEFT
-    // ------------------------------------------
+      border: 1px solid $border-color;
+    }
+
+    @include on-desktop {
+      grid-template-columns: 1fr 1fr;
+    }
 
     &__content {
       display: flex;
       flex-direction: column;
-
-      padding: 53px 50px 50px;
+      padding: 32px 22px;
+      
+      @include on-tablet {
+        padding: 40px;
+      }
+      
+      @include on-desktop {
+        padding: 53px 50px 50px;
+      }
     }
 
     &__label {
-      margin-bottom: 30px;
+      margin-bottom: 24px;
 
       color: $accent-color;
 
       font-family: $font-mono;
-      font-size: 13px;
+      font-size: 11px;
       letter-spacing: 1.8px;
+
+      @include on-tablet {
+        margin-bottom: 30px;
+
+        font-size: 13px;
+        letter-spacing: 1.5px;
+      }
     }
 
     &__title {
@@ -121,10 +156,14 @@
 
       color: $text-color;
 
-      font-size: 34px;
+      font-size: 26px;
       font-weight: 700;
       line-height: 1.2;
       letter-spacing: -1px;
+
+      @include on-tablet {
+        font-size: 34px;
+      }
     }
 
     &__description {
@@ -133,25 +172,56 @@
 
       color: $text-muted-color;
 
-      font-size: 18px;
-      line-height: 1.85;
-    }
+      font-size: 15px;
+      line-height: 1.75;
 
-    // ------------------------------------------
-    // ACTIONS
-    // ------------------------------------------
+      @include on-tablet {
+        font-size: 18px;
+        line-height: 1.85;
+      }
+    }
 
     &__actions {
-      display: flex;
-      gap: 14px;
+      flex-direction: column;
+      margin-top: 25px;
+      
+      @include on-tablet {
+        display: flex;
+        gap: 14px;
+  
+        margin-top: 30px;
+      }
 
-      margin-top: 30px;
+      &__button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 10px 25px;
+
+        border: 1px solid $accent-purple-color;
+
+        color: $accent-purple-color;
+
+        font-family: $font-mono;
+        font-size: 13px;
+        text-decoration: none;
+
+        transition:
+          color $effectDuration ease,
+          background $effectDuration ease,
+          border-color $effectDuration ease;
+
+        &:hover {
+          background: $accent-color;
+
+          border-color: $accent-color;
+
+          color: $background-color;
+        }
+      }
     }
   }
-
-  // ==========================================
-  // TAGS
-  // ==========================================
 
   .tags {
     display: flex;
@@ -177,45 +247,6 @@
     letter-spacing: 0.5px;
   }
 
-  // ==========================================
-  // BUTTON
-  // ==========================================
-
-  .projectButton {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    min-width: 160px;
-    min-height: 52px;
-    padding: 0 24px;
-
-    border: 1px solid $border-hover-color;
-
-    color: $text-muted-color;
-
-    font-family: $font-mono;
-    font-size: 13px;
-    text-decoration: none;
-
-    transition:
-      color $effectDuration ease,
-      background $effectDuration ease,
-      border-color $effectDuration ease;
-
-    &:hover {
-      background: $accent-color;
-
-      border-color: $accent-color;
-
-      color: $background-color;
-    }
-  }
-
-  // ==========================================
-  // CODE PREVIEW
-  // ==========================================
-
   .code {
     display: flex;
     align-items: center;
@@ -228,13 +259,27 @@
 
     overflow: hidden;
 
+    @include on-tablet {
+      min-height: 350px;
+
+      border-top: 1px solid $border-color;
+      border-left: 0;
+    }
+
     &__content {
       width: 100%;
-      padding: 48px 35px;
+      padding: 30px 15px;
 
       font-family: $font-mono;
-      font-size: 14px;
-      line-height: 2.2;
+      font-size: 10px;
+      line-height: 2;
+
+      @include on-tablet {
+        padding: 48px 35px;
+
+        font-size: 15px;
+        line-height: 2.2;
+      }
     }
 
     &__line {
@@ -249,13 +294,17 @@
     }
 
     &__number {
-      width: 30px;
+      width: 25px;
       margin-right: 0;
 
       color: #303142;
 
       text-align: right;
       user-select: none;
+
+      @include on-tablet {
+        width: 30px;
+      }
     }
 
     &__keyword {
@@ -283,24 +332,28 @@
     }
   }
 
-  // ==========================================
-  // OTHER PROJECTS
-  // ==========================================
-
-  .projectGrid {
+  &__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
 
-    border-left: 1px solid $border-color;
-    // border-bottom: 1px solid $border-color;
+    @include on-tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include on-desktop {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
-  .projectCard {
-    min-height: 300px;
-    padding: 43px 40px 38px;
+  &__card {
+    min-height: auto;
+    padding: 32px 22px;
 
-    border-right: 1px solid $border-color;
-    border-bottom: 1px solid $border-color;
+    border: 1px solid $border-color;
+
+    &:last-child {
+      grid-column: auto;
+    }
 
     transition:
       background $effectDuration ease;
@@ -309,24 +362,36 @@
       background: $background-surface-color;
     }
 
+    @include on-tablet {
+      padding: 43px 40px 38px;
+    }
+
     &__number {
       display: block;
 
-      margin-bottom: 38px;
+      margin-bottom: 25px;
 
       color: $text-dim-color;
 
       font-family: $font-mono;
       font-size: 13px;
+
+      @include on-tablet {
+        margin-bottom: 38px;
+      }
     }
 
     &__title {
       margin: 0 0 17px;
 
-      color: $text-color;
+      color: $accent-color;
 
-      font-size: 24px;
-      font-weight: 700;
+      font-size: 21px;
+      font-weight: 500;
+
+      @include on-tablet {
+        font-size: 24px;
+      }
     }
 
     &__description {
@@ -344,11 +409,11 @@
 
       margin-top: 25px;
 
-      a {
-        color: $text-muted-color;
+      &__button {
+        color: $accent-purple-color;
 
         font-family: $font-mono;
-        font-size: 12px;
+        font-size: 15px;
         text-decoration: none;
 
         transition: color $effectDuration ease;
@@ -356,134 +421,6 @@
         &:hover {
           color: $accent-color;
         }
-      }
-    }
-  }
-
-  // ==========================================
-  // TABLET
-  // ==========================================
-
-  @media (max-width: 1100px) {
-    padding: 20px 24px 80px;
-
-    .featured {
-      grid-template-columns: 1fr;
-
-      &__content {
-        padding: 40px;
-      }
-    }
-
-    .code {
-      min-height: 350px;
-
-      border-top: 1px solid $border-color;
-      border-left: 0;
-    }
-
-    .projectGrid {
-      grid-template-columns: 1fr 1fr;
-    }
-
-    .projectCard {
-      &:last-child {
-        grid-column: 1 / -1;
-      }
-    }
-  }
-
-  // ==========================================
-  // MOBILE
-  // ==========================================
-
-  @media (max-width: 650px) {
-
-    .sectionLabel {
-      margin-bottom: 20px;
-
-      font-size: 10px;
-      letter-spacing: 1.5px;
-
-      &__line {
-        width: 50px;
-      }
-    }
-
-    &__heading {
-      margin-bottom: 45px;
-
-      font-size: clamp(42px, 13vw, 58px);
-      letter-spacing: -2px;
-    }
-
-    .featured {
-      display: block;
-
-      &__content {
-        padding: 32px 22px;
-      }
-
-      &__label {
-        margin-bottom: 24px;
-
-        font-size: 11px;
-      }
-
-      &__title {
-        font-size: 26px;
-      }
-
-      &__description {
-        font-size: 15px;
-        line-height: 1.75;
-      }
-
-      &__actions {
-        flex-direction: column;
-
-        margin-top: 25px;
-      }
-    }
-
-    .projectButton {
-      width: 100%;
-    }
-
-    .code {
-      min-height: 300px;
-
-      &__content {
-        padding: 30px 15px;
-
-        font-size: 10px;
-        line-height: 2;
-      }
-
-      &__number {
-        width: 25px;
-      }
-    }
-
-    .projectGrid {
-      grid-template-columns: 1fr;
-    }
-
-    .projectCard {
-      min-height: auto;
-
-      padding: 32px 22px;
-
-      &:last-child {
-        grid-column: auto;
-      }
-
-      &__number {
-        margin-bottom: 25px;
-      }
-
-      &__title {
-        font-size: 21px;
       }
     }
   }

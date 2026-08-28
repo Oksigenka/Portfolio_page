@@ -11,43 +11,43 @@ const interests: Interest[] = [
     icon: '☕',
     title: 'Speciality Coffee',
     description:
-      'Amateur barista. Pour-over and AeroPress evangelist.',
+      'I enjoy discovering new coffee beans and brewing methods. Capuorange is my favorite coffee.',
   },
   {
-    icon: '🚴',
-    title: 'Cycling',
+    icon: '🏋',
+    title: 'Gym & Fitness',
     description:
-      'Weekend rides through the Dutch countryside and polders.',
-  },
-  {
-    icon: '📷',
-    title: 'Photography',
-    description:
-      'Street & architecture. Shooting on a Fujifilm X-T4.',
+      'I enjoy strength training and leading an active lifestyle. For me, it’s a way to build strength, clear my mind, and improve my well-being.',
   },
   {
     icon: '📚',
     title: 'Reading',
     description:
-      'Design, sci-fi, and philosophy of technology.',
+      'I enjoy reading books; I’m particularly interested in fantasy, mysteries, and novels. I also dream of having a small home library.',
+  },
+  {
+    icon: '📷',
+    title: 'Photography',
+    description:
+      'I love capturing interesting places, architecture, and everyday moments. Photography helps me notice details that are easy to overlook.',
   },
   {
     icon: '🎮',
-    title: 'Indie Games',
+    title: 'Games',
     description:
-      'Fascinated by UI/UX and interaction design in games.',
+      'I enjoy games that combine engaging stories with thoughtful design. I’m especially fascinated by UI, UX, and interactive experiences.',
   },
   {
-    icon: '🌱',
-    title: 'Open Source',
+    icon: '🏃',
+    title: 'Walking',
     description:
-      'Building in public. Giving back to the community.',
+      'I enjoy long walks and exploring new places, especially when I can discover something unexpected. It’s also one of my favourite ways to clear my mind.',
   },
 ];
 
 export const Hobbies = () => {
   return (
-    <section className={styles.beyondCoding} id="beyond-coding">
+    <section className={styles.beyondCoding} id="hobbies">
       <div className={styles.beyondCoding__container}>
 
         {/* Section label */}
