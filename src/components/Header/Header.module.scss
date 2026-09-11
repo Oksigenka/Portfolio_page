@@ -5,32 +5,18 @@
   margin-bottom: 70px;
   
     @include on-tablet {
-      // margin-top: 25px;
       display: flex;
       gap: 20px;
       justify-content: space-between;
     }
     
     @include on-desktop {
-      // margin-top: 100px;
       gap: 40px;
       margin-bottom: 100px;
     }
 
-  // ==========================================
-  // LEFT CARD
-  // ==========================================
-
   &__cardWrapper {
     position: relative;
-    
-    @include on-tablet {
-    //   min-width: 450px;
-    }
-
-    @include on-desktop {
-    //   min-width: 550px;
-    }
   }
 
   &__accent {
@@ -66,17 +52,12 @@
     }
   }
 
-  // ==========================================
-  // PROFILE
-  // ==========================================
-
   &__profile {
     display: flex;
     align-items: center;
     gap: 30px;
 
     @include on-tablet {
-      // align-items: flex-start;
       gap: 18px;
     }
   }
@@ -93,23 +74,9 @@
 
     border-radius: 50%;
 
-    // background: linear-gradient(
-    //   135deg,
-    //   $accent-purple-color,
-    //   $accent-color
-    // );
-
-    // color: $background-color;
-
-    // font-family: $font;
-    // font-size: 42px;
-    // font-weight: 400;
-
     @include on-tablet {
       width: 100px;
       height: 100px;
-
-      // font-size: 30px;
     }
   }
 
@@ -149,16 +116,16 @@
     }
 
     @include on-tablet {
-        margin-bottom: 12px;
+      margin-bottom: 12px;
 
-        font-size: 12px;
-        letter-spacing: 2px;
+      font-size: 12px;
+      letter-spacing: 2px;
 
-        &::before {
-            width: 50px;
+      &::before {
+        width: 50px;
 
-            margin-right: 15px;
-        }
+        margin-right: 15px;
+      }
     }
   }
 
@@ -170,7 +137,6 @@
 
     font-family: $font;
     font-size: 22px;
-    // font-size: clamp(27px, 8vw, 38px);
     font-weight: 400;
     line-height: 1;
 
@@ -190,10 +156,6 @@
     }
   }
 
-  // ==========================================
-  // STATUS
-  // ==========================================
-
   &__status {
     display: inline-flex;
     align-items: center;
@@ -201,7 +163,8 @@
     
     padding: 4px 6px;
     
-    background: rgba(200, 245, 66, 0.06);
+    background: $border-color;
+    // background: rgba(200, 245, 66, 0.06);
     border: 1px solid rgba(200, 245, 66, 0.2);
     
     color: $accent-color;
@@ -226,10 +189,6 @@
     background: $accent-color;
   }
 
-  // ==========================================
-  // DIVIDER
-  // ==========================================
-
   &__divider {
     width: 100%;
     height: 1px;
@@ -242,10 +201,6 @@
       margin: 30px 0;
     }
   }
-
-  // ==========================================
-  // CONTACTS
-  // ==========================================
 
   &__contacts {
     display: flex;
@@ -335,10 +290,6 @@
     }
   }
 
-  // ==========================================
-  // STATS
-  // ==========================================
-
   &__stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -357,8 +308,6 @@
   &__statsItem {
     display: flex;
     flex-direction: column;
-
-    // min-height: 75px;
 
     padding: 0 12px;
 
@@ -408,10 +357,6 @@
     }
   }
 
-  // ==========================================
-  // RIGHT CONTENT
-  // ==========================================
-
   &__content {
     display: flex;
     flex-direction: column;
@@ -424,46 +369,38 @@
     }
 
     &__paragraph {
-    // max-width: 600px;
+      margin: 0 0 15px;
 
-        margin: 0 0 15px;
+      color: $text-muted-color;
 
-        color: $text-muted-color;
+      font-family: $font-body;
+      font-size: 16px;
+      line-height: 1.75;
 
-        font-family: $font-body;
-        font-size: 16px;
-        line-height: 1.75;
+      &:first-child {
+      color: $text-color;
+      }
 
-        &:first-child {
+      &:last-child {
+      margin-bottom: 0;
+      }
+
+      @include on-tablet {
+        margin-bottom: 15px;
+
+        font-size: 19px;
+        line-height: 1.4;
+      }
+
+      @include on-desktop {
+        font-size: 19px;
+        line-height: 1.4;
+      }
+
+      &__strong {
         color: $text-color;
-        }
-
-        &:last-child {
-        margin-bottom: 0;
-        }
-
-        @include on-tablet {
-            // max-width: 850px;
-
-            margin-bottom: 15px;
-
-            font-size: 19px;
-            line-height: 1.4;
-        }
-
-        @include on-desktop {
-            // max-width: 850px;
-
-            // margin-bottom: 15px;
-
-            font-size: 19px;
-            line-height: 1.4;
-        }
-
-        &__strong {
-            color: $text-color;
-            font-weight: 700;
-        }
+        font-weight: 700;
+      }
     }
   }
 
@@ -502,6 +439,4 @@
       font-size: clamp(48px, 8vw, 72px);
     }
   }
-
- 
 }

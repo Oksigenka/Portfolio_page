@@ -16,19 +16,11 @@
     box-sizing: border-box;
   }
 
-  // ==========================================
-  // CONTAINER
-  // ==========================================
-
   &__container {
     width: 100%;
     max-width: 1700px;
     margin: 0 auto;
   }
-
-  // ==========================================
-  // SECTION LABEL
-  // ==========================================
 
   .sectionLabel {
     display: flex;
@@ -75,10 +67,6 @@
       }
     }
   }
-  
-  // ==========================================
-  // HEADING
-  // ==========================================
 
   &__heading {
     max-width: 800px;
@@ -116,18 +104,12 @@
     }
   }
 
-
-  // ==========================================
-  // TIMELINE
-  // ==========================================
-
   .timeline {
     position: relative;
 
     width: min(100%, 1000px);
   }
 
-  // Vertical line
   .timeline::before {
     content: '';
 
@@ -140,10 +122,6 @@
 
     background: $border-color;
   }
-
-  // ==========================================
-  // EXPERIENCE ITEM
-  // ==========================================
 
   .experienceItem {
     position: relative;
@@ -158,10 +136,6 @@
     &:last-child {
       min-height: auto;
     }
-
-    // ------------------------------------------
-    // TIMELINE
-    // ------------------------------------------
 
     &__timeline {
       position: relative;
@@ -199,17 +173,9 @@
         0 0 20px rgba(200, 245, 66, 0.15);
     }
 
-    // ------------------------------------------
-    // CONTENT
-    // ------------------------------------------
-
     &__content {
       padding-bottom: 75px;
     }
-
-    // ------------------------------------------
-    // DATE + BADGE
-    // ------------------------------------------
 
     &__meta {
       display: flex;
@@ -228,10 +194,6 @@
       text-transform: uppercase;
     }
 
-    // ------------------------------------------
-    // POSITION
-    // ------------------------------------------
-
     &__position {
       margin: 0 0 13px;
 
@@ -243,10 +205,6 @@
       line-height: 1.25;
     }
 
-    // ------------------------------------------
-    // COMPANY
-    // ------------------------------------------
-
     &__company {
       margin-bottom: 23px;
 
@@ -256,10 +214,6 @@
       font-size: 18px;
       font-weight: 500;
     }
-
-    // ------------------------------------------
-    // DESCRIPTION
-    // ------------------------------------------
 
     &__description {
       max-width: 850px;
@@ -271,10 +225,6 @@
       line-height: 1.9;
     }
   }
-
-  // ==========================================
-  // CURRENT BADGE
-  // ==========================================
 
   .currentBadge {
     display: inline-flex;
@@ -293,10 +243,6 @@
     font-weight: 500;
     letter-spacing: 0.5px;
   }
-
-  // ==========================================
-  // TECHNOLOGIES
-  // ==========================================
 
   .technologies {
     display: flex;
@@ -339,119 +285,97 @@
   // TABLET
   // ==========================================
 
-  @media (max-width: $desktop-min-width) {
-    &__heading {
-      margin-bottom: 55px;
-    }
+  // @media (max-width: $desktop-min-width) {
+  //   .timeline {
+  //     width: 100%;
+  //   }
 
-    .timeline {
-      width: 100%;
-    }
-
-    .experienceItem {
-      &__description {
-        max-width: 800px;
-      }
-    }
-  }
+  //   .experienceItem {
+  //     &__description {
+  //       max-width: 800px;
+  //     }
+  //   }
+  // }
 
   // ==========================================
   // MOBILE
   // ==========================================
 
-  @media (max-width: 650px) {
-    .sectionLabel {
-      margin-bottom: 20px;
+  // @media (max-width: 650px) {
+  //   .timeline::before {
+  //     left: 6px;
+  //   }
 
-      font-size: 10px;
-      letter-spacing: 1.5px;
+  //   .experienceItem {
+  //     grid-template-columns: 13px 1fr;
+  //     column-gap: 20px;
 
-      &__line {
-        width: 50px;
-      }
-    }
+  //     min-height: auto;
 
-    &__heading {
-      margin-bottom: 45px;
+  //     &__content {
+  //       padding-bottom: 55px;
+  //     }
 
-      font-size: clamp(42px, 13vw, 58px);
-      letter-spacing: -2px;
-    }
+  //     &__dot {
+  //       top: 8px;
 
-    .timeline::before {
-      left: 6px;
-    }
+  //       width: 12px;
+  //       height: 12px;
+  //     }
 
-    .experienceItem {
-      grid-template-columns: 13px 1fr;
-      column-gap: 20px;
+  //     &__dotActive {
+  //       width: 12px;
+  //       height: 12px;
+  //     }
 
-      min-height: auto;
+  //     &__meta {
+  //       align-items: flex-start;
+  //       flex-direction: column;
+  //       gap: 10px;
 
-      &__content {
-        padding-bottom: 55px;
-      }
+  //       margin-bottom: 15px;
+  //     }
 
-      &__dot {
-        top: 8px;
+  //     &__date {
+  //       font-size: 10px;
+  //       letter-spacing: 1.2px;
+  //     }
 
-        width: 12px;
-        height: 12px;
-      }
+  //     &__position {
+  //       margin-bottom: 10px;
 
-      &__dotActive {
-        width: 12px;
-        height: 12px;
-      }
+  //       font-size: 20px;
+  //     }
 
-      &__meta {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 10px;
+  //     &__company {
+  //       margin-bottom: 18px;
 
-        margin-bottom: 15px;
-      }
+  //       font-size: 16px;
+  //     }
 
-      &__date {
-        font-size: 10px;
-        letter-spacing: 1.2px;
-      }
+  //     &__description {
+  //       margin-bottom: 20px;
 
-      &__position {
-        margin-bottom: 10px;
+  //       font-size: 15px;
+  //       line-height: 1.75;
+  //     }
+  //   }
 
-        font-size: 20px;
-      }
+  //   .currentBadge {
+  //     padding: 5px 10px;
 
-      &__company {
-        margin-bottom: 18px;
+  //     font-size: 10px;
+  //   }
 
-        font-size: 16px;
-      }
+  //   .technologies {
+  //     gap: 7px;
+  //   }
 
-      &__description {
-        margin-bottom: 20px;
+  //   .technology {
+  //     min-height: 32px;
+  //     padding: 6px 11px;
 
-        font-size: 15px;
-        line-height: 1.75;
-      }
-    }
-
-    .currentBadge {
-      padding: 5px 10px;
-
-      font-size: 10px;
-    }
-
-    .technologies {
-      gap: 7px;
-    }
-
-    .technology {
-      min-height: 32px;
-      padding: 6px 11px;
-
-      font-size: 10px;
-    }
-  }
+  //     font-size: 10px;
+  //   }
+  // }
 }

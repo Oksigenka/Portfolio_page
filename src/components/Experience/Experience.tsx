@@ -67,7 +67,6 @@ export const Experience = () => {
     <section className={styles.experience} id="experience">
       <div className={styles.experience__container}>
 
-        {/* Section label */}
         <div className={styles.sectionLabel}>
           <span>05</span>
 
@@ -78,19 +77,16 @@ export const Experience = () => {
           <span className={styles.sectionLabel__line} />
         </div>
 
-        {/* Heading */}
         <h2 className={styles.experience__heading}>
           Work <em className={styles.experience__heading__em}>experience</em>.
         </h2>
 
-        {/* Timeline */}
         <div className={styles.timeline}>
           {experiences.map((experience) => (
             <article
               className={styles.experienceItem}
               key={`${experience.company}-${experience.date}`}
             >
-              {/* Timeline line */}
               <div className={styles.experienceItem__timeline}>
                 <span
                   className={`${styles.experienceItem__dot} ${
@@ -101,7 +97,6 @@ export const Experience = () => {
                 />
               </div>
 
-              {/* Content */}
               <div className={styles.experienceItem__content}>
 
                 <div className={styles.experienceItem__meta}>

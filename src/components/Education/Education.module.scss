@@ -16,19 +16,11 @@
     box-sizing: border-box;
   }
 
-  // =========================================
-  // CONTAINER
-  // =========================================
-
   &__container {
     width: 100%;
     max-width: 1740px;
     margin: 0 auto;
   }
-
-  // ==========================================
-  // SECTION LABEL
-  // ==========================================
 
   .sectionLabel {
     display: flex;
@@ -76,13 +68,7 @@
     }
   }
 
-  // ==========================================
-  // HEADING
-  // ==========================================
-
   &__heading {
-    // margin-bottom: 45px;
-
     font-family: $font;
     font-size: clamp(42px, 13vw, 58px);
     font-weight: 400;
@@ -110,10 +96,6 @@
     }
   }
 
-  // ==========================================
-  // GRID
-  // ==========================================
-
   .educationGrid {
     grid-template-columns: 1fr;
     gap: 18px;
@@ -130,17 +112,12 @@
     }
   }
 
-  // ==========================================
-  // CARD
-  // ==========================================
-
   .educationCard {
     min-height: auto;
 
     padding: 30px 22px 28px;
     margin-bottom: 10px;
 
-    // border-left-width: 3px;
     background: $background-surface-color;
 
     border: 1px solid $border-color;
@@ -202,10 +179,6 @@
       padding: 42px 38px 35px;    
     }
     
-    // ------------------------------------------
-    // PERIOD
-    // ------------------------------------------
-
     &__period {
       display: block;
 
@@ -218,10 +191,6 @@
       letter-spacing: 1.5px;
     }
 
-    // ------------------------------------------
-    // TITLE
-    // ------------------------------------------
-
     &__title {
       margin: 0 0 13px;
 
@@ -233,10 +202,6 @@
       line-height: 1.3;
     }
 
-    // ------------------------------------------
-    // INSTITUTION
-    // ------------------------------------------
-
     &__institution {
       margin-bottom: 22px;
 
@@ -246,10 +211,6 @@
       font-weight: 500;
       line-height: 1.4;
     }
-
-    // ------------------------------------------
-    // DESCRIPTION
-    // ------------------------------------------
 
     &__description {
       max-width: 850px;

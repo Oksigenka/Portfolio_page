@@ -3,12 +3,10 @@ import styles from './Header.module.scss';
 export const Header = () => {
   return (
     <section className={styles.header}>
-      {/* LEFT CARD */}
       <div className={styles.header__cardWrapper}>
         <div className={styles.header__accent} />
 
         <div className={styles.header__card}>
-          {/* PROFILE */}
           <div className={styles.header__profile}>
             <div className={styles.header__avatar}>
               <img
@@ -34,10 +32,8 @@ export const Header = () => {
             </div>
           </div>
 
-          {/* DIVIDER */}
           <div className={styles.header__divider} />
 
-          {/* CONTACT INFO */}
           <div className={styles.header__contacts}>
             <div className={styles.header__contact}>
               <span className={styles.header__contactIcon}>✉</span>
@@ -80,7 +76,7 @@ export const Header = () => {
 
             <div className={styles.header__contactLogo}>
               <a
-                href="https://linkedin.com/in/kseniia-karpenko"
+                href="https://www.linkedin.com/in/kseniia-karpenko-109b78291/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -90,13 +86,9 @@ export const Header = () => {
                   className={styles.header__contactValueIcon}
                 />
               </a>
-            {/* </div>
-
-            <div className={styles.header__contact}> */}
-              {/* <span className={styles.header__contactIcon}>⌁</span>
-              <span className={styles.header__contactLabel}>GitHub</span> */}
+              
               <a
-                href="https://github.com/kseniia-karpenko"
+                href="https://github.com/Oksigenka"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -107,17 +99,8 @@ export const Header = () => {
                 />
               </a>
             </div>
-
-            {/* <div className={styles.header__contact}>
-              <span className={styles.header__contactIcon}>◎</span>
-              <span className={styles.header__contactLabel}>Website</span>
-              <span className={styles.header__contactValue}>
-                kseniia.dev
-              </span>
-            </div> */}
           </div>
 
-          {/* STATS */}
           <div className={styles.header__stats}>
             <div className={styles.header__statsItem}>
               <strong className={styles.header__statsItem__strong}>2.5+</strong>
@@ -137,7 +120,6 @@ export const Header = () => {
         </div>
       </div>
 
-      {/* RIGHT CONTENT */}
       <div className={styles.header__content}>
         <h2 className={styles.header__heading}>
               About{' '}

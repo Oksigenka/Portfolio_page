@@ -47,35 +47,12 @@ export const About = () => {
 
         <div className={styles.aboutCard__grid}>
 
-          {/* LEFT COLUMN */}
           <div className={styles.aboutCard__content}>
 
             <h2 className={styles.aboutCard__heading}>
               Obsessed with{' '}
               <em className={styles.aboutCard__heading__em}>details</em>.
             </h2>
-
-            {/* <div className={styles.aboutCard__text}>
-              <p className={styles.aboutCard__text__paragraph}>
-                I'm <strong>Kseniia Karpenko</strong>, a full stack developer with
-                2.5+ years of commercial experience building responsive, scalable SPAs using React, TypeScript, and Node.js.
-                I have participated in 4–6 production projects as part of crossfunctional
-                teams of 5–6 people, working closely with backend, design, and QA specialists.
-              </p>
-
-              <p className={styles.aboutCard__text__paragraph}>
-                I prioritize clean code, a well-structured component architecture,
-                and a smooth user experience across different browsers and devices.
-                I hold a bachelor’s degree in computer science, which combines
-                a solid theoretical foundation with practical experience in product development.
-              </p>
-
-              <p className={styles.aboutCard__text__paragraph}>
-                I am currently seeking a position as a Full-Stack or Frontend Developer 
-                where I can continue to grow technically and contribute to the creation 
-                of high-quality products for users.
-              </p>
-            </div> */}
 
             <div className={styles.features}>
               {features.map((feature) => (
@@ -95,8 +72,6 @@ export const About = () => {
             </div>
 
           </div>
-
-          
 
         </div>
       </div>

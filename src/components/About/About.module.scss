@@ -1,7 +1,6 @@
 .aboutCard {
-    @include content-padding-in-line;
+  @include content-padding-in-line;
 
-//   min-height: 100vh;
   width: 100%;
   padding: 20px 30px 50px;
 
@@ -18,10 +17,6 @@
     box-sizing: border-box;
   }
 
-  // ==========================================
-  // CONTAINER
-  // ==========================================
-
   &__container {
     width: 100%;
     margin: 0 auto;
@@ -30,10 +25,6 @@
       padding: 18px 18px 50px;
     }
   }
-
-  // ==========================================
-  // SECTION LABEL
-  // ==========================================
 
   .sectionLabel {
     display: flex;
@@ -56,11 +47,6 @@
       letter-spacing: 1.5px;
     }
 
-    @include on-desktop {
-    //   margin-bottom: 30px;
-    //   padding: 20px 24px 60px;
-    }
-
     &__dash {
       width: 20px;
       height: 1px;
@@ -80,28 +66,6 @@
       }
     }
   }
-
-//   &__grid {
-//     @include on-tablet {
-//         display: grid;
-//         grid-template-columns:
-//         minmax(100px, 1fr)
-//         minmax(300px, 1fr);
-
-//         gap: 60px;
-//         align-items: start;
-//     }
-
-//     @include on-desktop {
-//       grid-template-columns: 1fr;
-//       gap: 60px;
-//     }
-      
-//   }
-
-  // ==========================================
-  // LEFT COLUMN
-  // ==========================================
 
   &__content {
     width: 100%;
@@ -148,42 +112,6 @@
       font-size: clamp(48px, 8vw, 72px);
     }
   }
-
-  &__text {
-    max-width: 810px;
-
-    &__paragraph {
-      margin: 0 0 27px;
-
-      color: $text-muted-color;
-
-      font-family: $font-body;
-      font-size: 15px;
-      line-height: 1.95;
-      letter-spacing: -0.2px;
-
-      strong {
-        color: $text-color;
-        font-weight: 700;
-      }
-
-      @include on-tablet {
-        margin-bottom: 22px;
-  
-        font-size: 16px;
-        line-height: 1.75;
-      }
-    }
-
-
-    @include on-desktop {
-      max-width: 900px;
-    }
-  }
-
-  // ==========================================
-  // FEATURES
-  // ==========================================
 
   .features {
     margin: 42px 0;
@@ -263,10 +191,6 @@
       }
     }
   }
-
-  // ==========================================
-  // RIGHT COLUMN
-  // ==========================================
 
   &__sidebar {
     display: flex;
