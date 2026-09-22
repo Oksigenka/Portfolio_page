@@ -50,7 +50,6 @@ export const Hobbies = () => {
     <section className={styles.beyondCoding} id="hobbies">
       <div className={styles.beyondCoding__container}>
 
-        {/* Section label */}
         <div className={styles.sectionLabel}>
           <span>06</span>
 
@@ -61,12 +60,10 @@ export const Hobbies = () => {
           <span className={styles.sectionLabel__line} />
         </div>
 
-        {/* Heading */}
         <h2 className={styles.beyondCoding__heading}>
           When I'm not <em>coding</em>.
         </h2>
 
-        {/* Interests */}
         <div className={styles.interests}>
           {interests.map((interest) => (
             <article

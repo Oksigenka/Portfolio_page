@@ -43,11 +43,6 @@
       letter-spacing: 1.5px;
     }
 
-    @include on-desktop {
-    //   margin-bottom: 30px;
-    //   padding: 20px 24px 60px;
-    }
-
     &__dash {
       width: 20px;
       height: 1px;
@@ -281,101 +276,4 @@
     }
   }
 
-  // ==========================================
-  // TABLET
-  // ==========================================
-
-  // @media (max-width: $desktop-min-width) {
-  //   .timeline {
-  //     width: 100%;
-  //   }
-
-  //   .experienceItem {
-  //     &__description {
-  //       max-width: 800px;
-  //     }
-  //   }
-  // }
-
-  // ==========================================
-  // MOBILE
-  // ==========================================
-
-  // @media (max-width: 650px) {
-  //   .timeline::before {
-  //     left: 6px;
-  //   }
-
-  //   .experienceItem {
-  //     grid-template-columns: 13px 1fr;
-  //     column-gap: 20px;
-
-  //     min-height: auto;
-
-  //     &__content {
-  //       padding-bottom: 55px;
-  //     }
-
-  //     &__dot {
-  //       top: 8px;
-
-  //       width: 12px;
-  //       height: 12px;
-  //     }
-
-  //     &__dotActive {
-  //       width: 12px;
-  //       height: 12px;
-  //     }
-
-  //     &__meta {
-  //       align-items: flex-start;
-  //       flex-direction: column;
-  //       gap: 10px;
-
-  //       margin-bottom: 15px;
-  //     }
-
-  //     &__date {
-  //       font-size: 10px;
-  //       letter-spacing: 1.2px;
-  //     }
-
-  //     &__position {
-  //       margin-bottom: 10px;
-
-  //       font-size: 20px;
-  //     }
-
-  //     &__company {
-  //       margin-bottom: 18px;
-
-  //       font-size: 16px;
-  //     }
-
-  //     &__description {
-  //       margin-bottom: 20px;
-
-  //       font-size: 15px;
-  //       line-height: 1.75;
-  //     }
-  //   }
-
-  //   .currentBadge {
-  //     padding: 5px 10px;
-
-  //     font-size: 10px;
-  //   }
-
-  //   .technologies {
-  //     gap: 7px;
-  //   }
-
-  //   .technology {
-  //     min-height: 32px;
-  //     padding: 6px 11px;
-
-  //     font-size: 10px;
-  //   }
-  // }
 }

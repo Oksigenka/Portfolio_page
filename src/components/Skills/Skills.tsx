@@ -68,7 +68,6 @@ export const Skills = () => {
     <section className={styles.skills} id="skills">
       <div className={styles.skills__container}>
 
-        {/* Section label */}
         <div className={styles.sectionLabel}>
           <span>03</span>
 
@@ -79,12 +78,10 @@ export const Skills = () => {
           <span className={styles.sectionLabel__line} />
         </div>
 
-        {/* Heading */}
         <h2 className={styles.skills__heading}>
           Technical <em className={styles.skills__heading__em}>skills</em>.
         </h2>
 
-        {/* Skills */}
         <div className={styles.skills__grid}>
           {skillCategories.map((category) => (
             <div

@@ -64,7 +64,6 @@
     box-sizing: border-box;
     width: 58px;
     height: 58px;
-    // border-left: 1px solid $grey-color-icons;
 
     @include on-tablet {
       display: none;
@@ -118,7 +117,6 @@
     @include on-desktop {
       width: 36px;
       height: 36px;
-      // margin: 13px 30px;
     }
 
     @include hover(transform, scale(1.2));
@@ -135,7 +133,6 @@
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center;
-  // background-size: 16px 16px;
 }
 
 .icon--burger {
@@ -159,8 +156,6 @@
   font-family: $font-mono;
   
   border: 1px solid $accent-color;
-
-  // width: 50px;
 
   font-size: 12px;
   padding: 8px 16px;
