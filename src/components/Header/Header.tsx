@@ -107,11 +107,6 @@ export const Header = () => {
               <span className={styles.header__statsItem__span}>Years Exp.</span>
             </div>
 
-            {/* <div className={styles.header__statsItem}>
-              <strong className={styles.header__statsItem__strong}>4–6</strong>
-              <span className={styles.header__statsItem__span}>Projects</span>
-            </div> */}
-
             <div className={styles.header__statsItem}>
               <strong className={styles.header__statsItem__strong}>BSc</strong>
               <span className={styles.header__statsItem__span}>CS Degree</span>
