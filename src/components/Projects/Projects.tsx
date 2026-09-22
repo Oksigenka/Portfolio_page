@@ -9,16 +9,6 @@ interface Project {
   githubUrl?: string;
 }
 
-const featuredProject = {
-  label: 'Apple Catalog',
-  title: 'Nice Gadgets',
-  description:
-    'A fully functional Apple product catalog, built using React and TypeScript with React Router and React Context to manage the state of the shopping cart and selected items. The project includes product filtering, sorting, and search functionality, pagination, and cross-session state persistence. The responsive design ensures proper display on screens ranging from 330 to 1440 pixels. The project demonstrates skills in building complex component-based architecture and attention to UX details',
-  tags: ['React', 'TypeScript', ' SCSS module'],
-  liveUrl: 'https://oksigenka.github.io/apple-catalog/#/',
-  githubUrl: 'https://github.com/Oksigenka/apple-catalog',
-};
-
 const projects: Project[] = [
   {
     number: '01',
@@ -65,47 +55,6 @@ const projects: Project[] = [
     liveUrl: 'https://oksigenka.github.io/bang-olufsen/',
     githubUrl: 'https://github.com/Oksigenka/bang-olufsen',
   },
-];
-
-const codeExample = [
-  <>
-    <span className={styles.code__keyword}>import</span>{' '}
-    {'{ Button, Card, Badge } '}
-    <span className={styles.code__keyword}>from</span>{' '}
-    <span className={styles.code__string}>'@lumen/ui'</span>
-  </>,
-  '',
-  <>
-    <span className={styles.code__keyword}>export const</span>{' '}
-    <span className={styles.code__function}>Dashboard</span> = () =&gt; (
-  </>,
-  <>
-    {'  <'}<span className={styles.code__tag}>Card</span>{' '}
-    <span className={styles.code__prop}>variant</span>=
-    <span className={styles.code__string}>"elevated"</span>{'>'}
-  </>,
-  <>
-    {'    <'}<span className={styles.code__tag}>Badge</span>{' '}
-    <span className={styles.code__prop}>status</span>=
-    <span className={styles.code__string}>"success"</span>{'>'}
-    Live{'</'}<span className={styles.code__tag}>Badge</span>{'>'}
-  </>,
-  <>
-    {'    <'}<span className={styles.code__tag}>Button</span>{' '}
-    <span className={styles.code__prop}>size</span>=
-    <span className={styles.code__string}>"lg"</span>{'>'}
-    Get started{'</'}<span className={styles.code__tag}>Button</span>{'>'}
-  </>,
-  <>
-    {'  </'}<span className={styles.code__tag}>Card</span>{'>'}
-  </>,
-  ')',
-  '',
-  <>
-    <span className={styles.code__comment}>
-      // 120+ components · Full a11y · Dark mode
-    </span>
-  </>,
 ];
 
 export const Projects = () => {
