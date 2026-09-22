@@ -2,7 +2,6 @@ import React from 'react';
 import { Nav } from '../Nav';
 import styles from './Menu.module.scss';
 import { TopBar } from '../TopBar';
-import { useNavigate } from 'react-router-dom';
 
 type Props = {
   isMenuOpen: boolean;
@@ -10,11 +9,19 @@ type Props = {
 };
 
 export const Menu: React.FC<Props> = ({ isMenuOpen, setMenuOpen }) => {
-  const navigate = useNavigate();
-
-  const goFavorites = (e: React.MouseEvent) => {
+   const goContact = (e: React.MouseEvent) => {
     e.preventDefault();
-    navigate('/favorites');
+  
+    const element = document.getElementById('contact');
+  
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+
+    setMenuOpen(false);
   };
 
   return (
@@ -36,7 +43,7 @@ export const Menu: React.FC<Props> = ({ isMenuOpen, setMenuOpen }) => {
           </div>
 
           <div className={styles.menuBottom}>
-            <div className={styles.iconButton} onClick={goFavorites}>
+            <div className={styles.iconButton} onClick={goContact}>
               <p className={styles.iconButton__text}>Hire me →</p>
             </div>
           </div>
