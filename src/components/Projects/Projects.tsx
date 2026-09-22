@@ -73,101 +73,6 @@ export const Projects = () => {
           Selected <em className={styles.projects__heading__em}>projects</em>.
         </h2>
 
-        {/* <article className={styles.featured}>
-          <div className={styles.featured__content}>
-            <span className={styles.featured__label}>
-              {featuredProject.label}
-            </span>
-
-            <h3 className={styles.featured__title}>
-              {featuredProject.title}
-            </h3>
-
-            <p className={styles.featured__description}>
-              {featuredProject.description}
-            </p>
-
-            <div className={styles.tags}>
-              {featuredProject.tags.map((tag) => (
-                <span className={styles.tag} key={tag}>
-                  {tag}
-                </span>
-              ))}
-            </div>
-
-            <div className={styles.featured__actions}>
-              <a
-                href={featuredProject.liveUrl}
-                className={styles.featured__actions__button}
-              >
-                Live Demo →
-              </a>
-
-              <a
-                href={featuredProject.githubUrl}
-                className={styles.featured__actions__button}
-              >
-                GitHub →
-              </a>
-            </div>
-          </div>
-
-          <div className={styles.code}>
-            <div className={styles.code__content}>
-              {codeExample.map((line, index) => (
-                <div className={styles.code__line} key={index}>
-                  <span className={styles.code__number}>
-                    {index + 1}
-                  </span>
-
-                  <code>{line}</code>
-                </div>
-              ))}
-            </div>
-          </div>
-        </article> */}
-
-        {/* <div className={styles.projects__grid}>
-          {projects.map((project) => (
-            <article
-              className={styles.projects__card}
-              key={project.number}
-            >
-              <span className={styles.projects__card__number}>
-                {project.number}
-              </span>
-
-              <h3 className={styles.projects__card__title}>
-                {project.title}
-              </h3>
-
-              <p className={styles.projects__card__description}>
-                {project.description}
-              </p>
-
-              <div className={styles.tags}>
-                {project.tags.map((tag) => (
-                  <span className={styles.tag} key={tag}>
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
-              <div className={styles.projects__card__actions}>
-                {project.liveUrl && (
-                  <a href={project.liveUrl} className={styles.projects__card__actions__button}>Live Demo →</a>
-                )}
-
-                {project.githubUrl && (
-                  <a href={project.githubUrl} className={styles.projects__card__actions__button}>
-                    GitHub →
-                  </a>
-                )}
-              </div>
-            </article>
-          ))}
-        </div> */}
-
         <div className={styles.projects__grid}>
           {projects.map((project) => (
             <article
@@ -182,10 +87,6 @@ export const Projects = () => {
                     loading="lazy"
                     className={styles.projects__card__preview__iframe}
                   />
-
-                  {/* <div className={styles.projects__card__preview__overlay}>
-                    <span className={styles.projects__card__preview__text}>View project ↗</span>
-                  </div> */}
                 </div>
               )}
 
