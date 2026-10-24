@@ -50,6 +50,18 @@ const skillCategories: SkillCategory[] = [
       { name: 'SQL' },
       { name: 'Docker' },
       { name: 'ESLint & Prettier' },
+      { name: 'Notion' },
+      { name: 'MS Office' },
+    ],
+  },
+  {
+    title: 'ORGANIZATION & COORDINATION',
+    skills: [
+      { name: 'Project coordination' },
+      { name: 'Scheduling' },
+      { name: 'Task tracking' },
+      { name: 'Documentation' },
+      { name: 'Process standardization' },
     ],
   },
   {
