@@ -46,7 +46,7 @@ const experiences: ExperienceItem[] = [
   },
   {
     date: 'August 2023 – Feb 2025',
-    position: 'Frontend Developer',
+    position: 'Frontend Developer & Project Coordinator',
     company: 'Coddu',
     description:
       'Contributing to the UI of 5 commercial SPAs (course catalogue, student dashboard, admin panel, payment portal). Integrating REST APIs for course content, progress tracking, and real-time notifications via WebSockets. Collaborating closely with 2 other developers through weekly code reviews and joint architectural decisions. Proposing and rolling out frontend code standards (ESLint + Prettier, SCSS module conventions, component naming) adopted across team projects. Ensuring responsive, cross-browser UI across desktop and mobile for all delivered products.',
