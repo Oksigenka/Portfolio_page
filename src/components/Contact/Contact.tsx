@@ -62,7 +62,7 @@ export const Contact = () => {
 
           <a
             className={styles.contact__link}
-            href="/CV_Kseniia_Karpenko 2026.pdf"
+            href="/CV_Kseniia_Karpenko_2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
           >
