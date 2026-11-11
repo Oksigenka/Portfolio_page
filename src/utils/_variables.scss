@@ -1,18 +1,58 @@
 $tablet-min-width: 690px;
 $desktop-min-width: 1000px;
 
-$background-color: #0a0a0f;
-$background-card-color: #2a2a3c;
-$background-surface-color: #18181f;
+// $background-color: #2a2a2d;
+// // $background-color: #0a0a0f;
+// $background-card-color: #343437;
+// // $background-card-color: #2a2a3c;
+// $background-surface-color: #343437;
+// // $background-surface-color: #18181f;
+// $accent-color: #c8f542;
+// $accent-purple-color: #7b61ff;
+// $text-color: #f0eee8;
+// $text-muted-color: #8a8898;
+// $text-dim-color: #3d3d52;
+// $border-color: rgba(240, 238, 232, 0.08);
+// $border-hover-color: rgba(240, 238, 232, 0.18);
+// $font: 'DM Serif Display', serif;
+// $font-body: 'Outfit', sans-serif;
+// $font-mono: 'DM Mono', monospace;
+// $effectDuration: 0.3s;
+// $footer-height: 66px;
+
+// Фони
+$background-color: #2a2a2d;
+$background-card-color: #343437;
+$background-surface-color: #3f3f43;
+
+// Акценти
 $accent-color: #c8f542;
-$accent-purple-color: #7b61ff;
-$text-color: #f0eee8;
-$text-muted-color: #8a8898;
-$text-dim-color: #3d3d52;
-$border-color: rgba(240, 238, 232, 0.08);
-$border-hover-color: rgba(240, 238, 232, 0.18);
+$accent-hover-color: #d6f86a;
+$accent-soft-color: rgba(200, 245, 66, 0.10);   // new: бейджі, статус
+$accent-border-color: rgba(200, 245, 66, 0.28); // new: рамки бейджів
+$accent-purple-color: #9a85ff;
+$on-accent-color: #1a1a1a;
+
+// Текст
+$text-color: #f5f3ee;
+$text-muted-color: #bcbcc0;
+$text-dim-color: #8c8c92;
+
+// Бордери
+$border-color: rgba(245, 243, 238, 0.12);
+$border-hover-color: rgba(245, 243, 238, 0.26);
+
+// Службові (new)
+$nav-bg-color: rgba(42, 42, 45, 0.85);
+$overlay-color: rgba(18, 18, 20, 0.75);
+$shadow-card: 0 20px 50px rgba(0, 0, 0, 0.35);
+$grid-line-color: rgba(200, 245, 66, 0.03);
+$glow-color: rgba(200, 245, 66, 0.05);
+
+// Шрифти
 $font: 'DM Serif Display', serif;
 $font-body: 'Outfit', sans-serif;
 $font-mono: 'DM Mono', monospace;
+
 $effectDuration: 0.3s;
 $footer-height: 66px;

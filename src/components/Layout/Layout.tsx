@@ -12,11 +12,11 @@ export default function Layout() {
   return (
     <>
       <Header />
-      <About />
-      <Projects />
-      <Skills />
       <Education />
+      <Projects />
       <Experience />
+      <Skills />
+      <About />
       <Hobbies />
       <Contact />
       <Outlet />

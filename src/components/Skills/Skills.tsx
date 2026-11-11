@@ -23,7 +23,7 @@ const skillCategories: SkillCategory[] = [
   {
     title: 'STYLING & FRAMEWORKS',
     skills: [
-      { name: 'CSS / Sass' },
+      { name: 'CSS / SCSS' },
       { name: 'BEM' },
       { name: 'Tailwind' },
       { name: 'Material UI' },
@@ -37,6 +37,16 @@ const skillCategories: SkillCategory[] = [
       { name: 'REST API' },
       { name: 'WebSockets' },
       { name: 'Node.js' },
+      { name: 'SOAP' },
+    ],
+  },
+  {
+    title: 'BACKEND & AI',
+    skills: [
+      { name: 'Python' },
+      { name: 'SQL' },
+      { name: 'Docker' },
+      { name: 'LLM / ChatGPT API' },
       { name: 'FastAPI' },
     ],
   },
@@ -46,9 +56,6 @@ const skillCategories: SkillCategory[] = [
       { name: 'Git' },
       { name: 'Vite' },
       { name: 'Webpack' },
-      { name: 'Python' },
-      { name: 'SQL' },
-      { name: 'Docker' },
       { name: 'ESLint & Prettier' },
       { name: 'Notion' },
       { name: 'MS Office' },
@@ -81,7 +88,7 @@ export const Skills = () => {
       <div className={styles.skills__container}>
 
         <div className={styles.sectionLabel}>
-          <span>03</span>
+          <span>04</span>
 
           <span className={styles.sectionLabel__dash} />
 

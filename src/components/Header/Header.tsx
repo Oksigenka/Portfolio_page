@@ -18,7 +18,7 @@ export const Header = () => {
 
             <div className={styles.header__identity}>
               <div className={styles.header__tag}>
-                Full Stack Developer
+                Frontend Developer
               </div>
 
               <h1 className={styles.header__name}>
@@ -59,14 +59,6 @@ export const Header = () => {
             </div>
 
             <div className={styles.header__contact}>
-              <span className={styles.header__contactIcon}>▣</span>
-              <span className={styles.header__contactLabel}>Date of birth</span>
-              <span className={styles.header__contactValue}>
-                21.02.2005
-              </span>
-            </div>
-
-            <div className={styles.header__contact}>
               <span className={styles.header__contactIcon}>⌖</span>
               <span className={styles.header__contactLabel}>Location</span>
               <span className={styles.header__contactValue}>
@@ -103,7 +95,7 @@ export const Header = () => {
 
           <div className={styles.header__stats}>
             <div className={styles.header__statsItem}>
-              <strong className={styles.header__statsItem__strong}>2.5+</strong>
+              <strong className={styles.header__statsItem__strong}>3+</strong>
               <span className={styles.header__statsItem__span}>Years Exp.</span>
             </div>
 
@@ -121,25 +113,30 @@ export const Header = () => {
               <em className={styles.header__heading__em}>me</em>.
             </h2>
         <p className={styles.header__content__paragraph}>
-          I'm a full stack developer with{' '}
-          <strong className={styles.header__content__paragraph}>2.5+ years of commercial experience</strong> crafting
-          responsive, scalable SPAs with React, TypeScript, and Node.js.
+          I'm a Frontend Developer with a{' '}
+          <strong className={styles.header__content__paragraph}>BSc in Computer Science and 3+ years of commercial experience</strong> 
+          building React/TypeScript SPAs. Started as a frontend developer at Coddu and after six months 
+          moved into a Project Coordinator role, leading a commercial education platform: planning work,
+          assigning tasks across a team of 6 and supporting the founder.
         </p>
 
         <p className={styles.header__content__paragraph}>
-          I've shipped production-ready features across{' '}
+          Delivered 5 commercial SPAs, worked in Scrum teams at AASSolutions, and now build SPAs and landing pages from Figma
+          for freelance clients. Strong at turning requirements into clear tasks, documentation and
+          consistent code standards.
+          {/* I've shipped production-ready features across{' '}
           <strong className={styles.header__content__paragraph}>4–6 real-world projects</strong> within cross-functional
           teams — collaborating closely with backend engineers, designers,
-          and QA specialists to deliver polished end-to-end solutions.
+          and QA specialists to deliver polished end-to-end solutions. */}
         </p>
 
-        <p className={styles.header__content__paragraph}>
+        {/* <p className={styles.header__content__paragraph}>
           I write clean, maintainable code and architect components that
           scale — always with a sharp eye on cross-browser consistency and
           user experience. My Computer Science degree gives me both the
           theoretical depth to tackle complex problems and the hands-on
           experience to ship what actually matters.
-        </p>
+        </p> */}
       </div>
     </section>
   );

@@ -208,9 +208,9 @@
           border-color $effectDuration ease;
 
         &:hover {
-          background: $accent-color;
+          background: $accent-hover-color;
 
-          border-color: $accent-color;
+          border-color: $accent-hover-color;
 
           color: $background-color;
         }
@@ -442,7 +442,7 @@
         transition: color $effectDuration ease;
 
         &:hover {
-          color: $accent-color;
+          color: $accent-hover-color;
         }
       }
     }

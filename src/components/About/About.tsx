@@ -39,7 +39,7 @@ export const About = () => {
       <div className={styles.aboutCard__container}>
 
         <div className={styles.sectionLabel}>
-          <span>01</span>
+          <span>05</span>
           <span className={styles.sectionLabel__dash} />
           <span>Competences</span>
           <span className={styles.sectionLabel__line} />

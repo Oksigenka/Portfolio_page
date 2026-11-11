@@ -30,7 +30,7 @@ export const Education = () => {
       <div className={styles.education__container}>
 
         <div className={styles.sectionLabel}>
-          <span>04</span>
+          <span>01</span>
 
           <span className={styles.sectionLabel__dash} />
 
