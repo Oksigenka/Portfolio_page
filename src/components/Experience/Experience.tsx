@@ -46,10 +46,10 @@ const experiences: ExperienceItem[] = [
   },
   {
     date: 'Mar 2024 – Feb 2025',
-    position: 'Project Coordinator',
+    position: 'Administrative Assistant / Project Manager',
     company: 'Coddu',
     description:
-      'Led day-to-day project management of a commercial education platform: planned work, prioritised tasks and tracked progress for a team of 6 (developers, designers, testers). Distributed tasks across the team and kept delivery on schedule from specification to launch. Worked directly with the founder: translated business goals into tasks, prepared priorities and kept them informed on progress. Coordinated code reviews, testing and releases between developers, designers and QA. Maintained documentation for internal processes and integrations.',
+      'Led day-to-day project management of a commercial education platform: planned work, prioritised tasks and tracked progress for a team of 6 (developers, designers, testers). Distributed tasks across the team and kept delivery on schedule from specification to launch. Maintained documentation for internal processes and integrations. Served as the key liaison between the Head of the organisation and department heads, ensuring timely and clear communication across teams. Managed the executive’s calendar, scheduled meetings, and arranged business travel. Handled electronic document flow, including incoming and outgoing correspondence, reports, and client inquiries, and prepared documents for archiving in line with internal procedures. Prepared and coordinated meetings and calls, took minutes, and communicated decisions and action items to department heads, following up on their execution.',
     technologies: [
       'React',
       'JavaScript',
